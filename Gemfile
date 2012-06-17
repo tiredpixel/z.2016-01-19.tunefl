@@ -25,6 +25,10 @@ end
 
 gem 'jquery-rails'
 
+group :production do
+  gem 'thin'
+end
+
 group :test, :development do
   gem 'rspec-rails'
   gem 'shoulda-matchers'
