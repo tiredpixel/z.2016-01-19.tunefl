@@ -1,8 +1,15 @@
 Tunefl::Application.routes.draw do
-  ActiveAdmin.routes(self)
-
-  devise_for :admin_users, ActiveAdmin::Devise.config
-
+  
+  scope '/:locale' do
+    ActiveAdmin.routes(self)
+    
+    devise_for :admin_users, ActiveAdmin::Devise.config
+    
+    root :to => 'statics#index'
+  end
+  
+  match '/', :to => 'statics#index', :locale => 'en'
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
