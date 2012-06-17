@@ -1,5 +1,7 @@
 Tunefl::Application.routes.draw do
   
+  match '/sitemap', :to => 'statics#sitemap', :locale => 'en'
+  
   scope '/:locale' do
     ActiveAdmin.routes(self)
     
