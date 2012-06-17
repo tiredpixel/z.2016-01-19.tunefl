@@ -8,6 +8,7 @@ gem 'rails', '3.2.6'
 gem 'pg'
 
 gem 'activeadmin'
+gem 'formtastic', '~> 2.1.1' # pin to work with activeadmin
 
 gem 'twitter-bootstrap-rails'
 
