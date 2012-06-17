@@ -32,8 +32,8 @@
 
 html, body {
   font-family: 'Ubuntu', sans-serif;
-/*  background-image: url("background.png");*/
-/*  background-attachment: fixed;*/
+  background-image: url("background.png");
+  background-attachment: fixed;
   padding-top: 0;
   color: @color-b;
 }
@@ -44,15 +44,49 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
-/* = logo */
+/* = main */
 
-.logo {
-  background-color: @color-w;
+.main {
+  background-color: #E9D8C9;
+  background-color: rgba(233, 216, 201, .8);
+  box-shadow: 1px 1px 5px @color-sa-2;
+  margin-bottom: 25px;
+  padding: 25px;
+}
+
+
+/* = bar */
+
+.bar {
+  background-image: url("bar_background.png");
+  background-attachment: fixed;
+  box-shadow: 1px 1px 5px @color-sb-2;
+  margin-bottom: 25px;
+}
+
+
+/* = header */
+
+.header {
+  height: 150px;
+  position: relative;
   
   .logo {
-    max-width: 100%;
-    display: block;
-    margin: 20px auto;
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    width: 228px;
+    height: 100px;
+  }
+  
+  .treble_clef {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    background-image: url("header_treble_clef.png");
+    background-repeat: no-repeat;
+    width: 80px;
+    height: 150px;
   }
 }
 
@@ -60,13 +94,23 @@ h1, h2, h3, h4, h5, h6 {
 /* = footer */
 
 .footer {
+  height: 100px;
+  position: relative;
+  
+  .bass_clef {
+    position: absolute;
+    bottom: 0;
+    left: 25px;
+    background-image: url("footer_bass_clef.png");
+    background-repeat: no-repeat;
+    width: 96px;
+    height: 100px;
+  }
+  
   .credits {
-    max-width: 100%;
-    display: block;
-    margin: 20px auto;
+    margin: 25px auto;
     text-align: center;
-    color: @color-b;
-    background-color: @color-w;
+    color: @color-sb-5;
     
     a {
       color: inherit;
@@ -85,8 +129,13 @@ h1, h2, h3, h4, h5, h6 {
 .content {
   text-align: center;
   
-  h1,
+  h1 {
+    color: @color-sb-3;
+    margin-bottom: 1em;
+  }
+  
   h3 {
+    color: @color-sb-4;
     margin-bottom: 1em;
   }
 }

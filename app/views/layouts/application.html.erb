@@ -25,20 +25,24 @@
   <body>
     <div class="container">
       <div class="content">
-        <div class="row">
-          <div class="span4 offset4 logo">
-            <%= link_to image_tag("tunefl.png", :class => "logo"), root_path %>
+        <div class="row bar header">
+          <div class="span12">
+            <%= link_to image_tag("logo.png", :class => "logo"), root_path %>
+            
+            <div class="treble_clef"></div>
           </div>
         </div>
         
-        <div class="row">
+        <div class="row main">
           <div class="span12">
             <%= content_for?(:middle) ? yield(:middle) : "" %>
           </div>
         </div>
         
-        <div class="row">
-          <div class="span4 offset4 footer">
+        <div class="row bar footer">
+          <div class="span12">
+            <div class="bass_clef"></div>
+            
             <div class="credits">
               <p><%= t 'footer.copyright' %></p>
               <p><%= link_to t('footer.tiredpixel'), "http://twitter.com/tiredpixel" %></p>
