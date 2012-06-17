@@ -1,0 +1,61 @@
+/* = colors */
+
+@color-w: #FFFFFF;
+@color-b: #000000;
+
+
+/* = main */
+
+.clear {
+  clear: both;
+}
+
+html, body {
+  font-family: 'Ubuntu', sans-serif;
+/*  background-image: url("background.png");*/
+/*  background-attachment: fixed;*/
+  padding-top: 0;
+  color: @color-b;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+  word-wrap: break-word;
+}
+
+
+/* = logo */
+
+.logo {
+  background-color: @color-w;
+  
+  .logo {
+    max-width: 100%;
+    display: block;
+    margin: 20px auto;
+  }
+}
+
+
+/* = footer */
+
+.footer {
+  .credits {
+    max-width: 100%;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    color: @color-b;
+    background-color: @color-w;
+    
+    a {
+      color: inherit;
+    }
+    
+    a:hover {
+      text-decoration: underline;
+      color: inherit;
+    }
+  }
+}
+
