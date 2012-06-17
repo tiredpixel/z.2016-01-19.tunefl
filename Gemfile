@@ -26,6 +26,8 @@ end
 
 gem 'jquery-rails'
 
+gem 'rack-google-analytics', :require => 'rack/google-analytics'
+
 group :production do
   gem 'thin'
 end
