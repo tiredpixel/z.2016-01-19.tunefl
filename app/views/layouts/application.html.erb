@@ -32,20 +32,8 @@
         </div>
         
         <div class="row">
-          <div class="span4">
-            <div class="row">
-              <div class="span4">
-                <%= content_for?(:left) ? yield(:left) : "" %>
-              </div>
-            </div>
-          </div>
-          
-          <div class="span4">
+          <div class="span12">
             <%= content_for?(:middle) ? yield(:middle) : "" %>
-          </div>
-          
-          <div class="span4">
-            <%= content_for?(:right) ? yield(:right) : "" %>
           </div>
         </div>
         
