@@ -1,12 +1,10 @@
-<% content_for :middle do %>
-  <h1>tunefl ♮ Inspiring musical-creativity.</h1>
-  
-  <h3>The conductor is walking to the podium.<br />You are invited to the concert, which begins 19:30 Wed 27 Jun 2012 (GMT +01:00).</h3>
-  
-  <a href="https://twitter.com/tunefl" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @tunefl :)</a>
-  
-  <script>
-    !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
-</script>
+<% content_for :left do %>
+  <%= render :partial => "shared/about" %>
+<% end %>
+
+<% content_for :right do %>
+  <div class='main'>
+    
+  </div>
 <% end %>
 

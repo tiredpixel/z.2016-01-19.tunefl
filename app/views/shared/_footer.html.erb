@@ -1,0 +1,11 @@
+<% cache("views/shared/footer", :expires_in => 1.hour) { %>
+  <div class='footer bar'>
+    <div class='bass_clef'></div>
+    
+    <div class='credits'>
+      <p><%= t 'footer.copyright' %></p>
+      <p><%= link_to t('footer.tiredpixel'), "http://twitter.com/tiredpixel" %></p>
+    </div>
+  </div>
+<% } %>
+

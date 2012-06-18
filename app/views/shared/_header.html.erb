@@ -1,0 +1,8 @@
+<% cache("views/shared/header", :expires_in => 1.hour) { %>
+  <div class='header bar'>
+    <%= link_to image_tag("logo.png", :class => "logo"), root_path %>
+    
+    <div class="treble_clef"></div>
+  </div>
+<% } %>
+

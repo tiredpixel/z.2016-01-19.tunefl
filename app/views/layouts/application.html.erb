@@ -23,30 +23,27 @@
   </head>
   
   <body>
-    <div class="container">
-      <div class="content">
-        <div class="row bar header">
-          <div class="span12">
-            <%= link_to image_tag("logo.png", :class => "logo"), root_path %>
-            
-            <div class="treble_clef"></div>
+    <div class='container'>
+      <div class='content'>
+        <div class='row'>
+          <div class='span12'>
+            <%= render :partial => "shared/header" %>
           </div>
         </div>
         
-        <div class="row main">
-          <div class="span12">
-            <%= content_for?(:middle) ? yield(:middle) : "" %>
+        <div class='row'>
+          <div class='span6'>
+            <%= content_for?(:left) ? yield(:left) : "" %>
+          </div>
+          
+          <div class='span6'>
+            <%= content_for?(:right) ? yield(:right) : "" %>
           </div>
         </div>
         
-        <div class="row bar footer">
-          <div class="span12">
-            <div class="bass_clef"></div>
-            
-            <div class="credits">
-              <p><%= t 'footer.copyright' %></p>
-              <p><%= link_to t('footer.tiredpixel'), "http://twitter.com/tiredpixel" %></p>
-            </div>
+        <div class='row'>
+          <div class='span12'>
+            <%= render :partial => "shared/footer" %>
           </div>
         </div>
       </div>
