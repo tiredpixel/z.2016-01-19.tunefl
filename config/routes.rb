@@ -1,5 +1,6 @@
 Tunefl::Application.routes.draw do
   
+  match '/legal',   :to => 'statics#legal', :locale => 'en'
   match '/sitemap', :to => 'statics#sitemap', :locale => 'en'
   
   scope '/:locale' do

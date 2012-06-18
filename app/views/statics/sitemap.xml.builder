@@ -13,5 +13,10 @@ xml.urlset :xmlns => 'http://www.sitemaps.org/schemas/sitemap/0.9' do
     xml.loc root_url
   end
   
+  # legal
+  xml.url do
+    xml.loc legal_url
+  end
+  
 end
 

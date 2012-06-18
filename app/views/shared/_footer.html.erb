@@ -7,6 +7,10 @@
       <p><%= link_to t('footer.tiredpixel'), "http://twitter.com/tiredpixel" %></p>
     </div>
     
+    <div class='links'>
+      <p><%= link_to(t('legal.title'), legal_path) %></p>
+    </div>
+    
     <%= render :partial => "shared/external/addthis_share" %>
   </div>
 <% } %>
