@@ -3,9 +3,16 @@
 <% end %>
 
 <% content_for :left do %>
-  <div class='legal main'>
-    <h2><%= t 'legal.cookies.title' %></h2>
+  <div class='legal cookies main'>
+    <h3><%= t 'legal.cookies.title' %></h3>
     <p><%=raw t 'legal.cookies.body' %></p>
+  </div>
+<% end %>
+
+<% content_for :right do %>
+  <div class='legal copyright main'>
+    <h3><%= t 'legal.copyright.title' %></h3>
+    <p><%=raw t 'legal.copyright.body' %></p>
   </div>
 <% end %>
 

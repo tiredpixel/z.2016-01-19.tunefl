@@ -41,7 +41,7 @@ html, body {
 h1, h2, h3, h4, h5, h6 {
   font-weight: normal;
   word-wrap: break-word;
-  margin-bottom: 1em;
+  margin-bottom: .5em;
 }
 
 h1, h2 {
@@ -50,6 +50,12 @@ h1, h2 {
 
 h3, h4, h5, h6 {
   color: @color-sb-4;
+}
+
+p {
+  text-align: justify;
+  font-size: 13px;
+  line-height: 1.5em;
 }
 
 a,
@@ -135,9 +141,12 @@ a:hover {
   .credits {
     position: relative;
     padding: 25px;
-    text-align: center;
     color: @color-sb-5;
     z-index: 1;
+    
+    p {
+      text-align: center;
+    }
     
     a {
       color: inherit;
@@ -178,11 +187,11 @@ a:hover {
   text-align: center;
   
   h1 {
-    margin-bottom: 0;
+    margin: 0;
   }
   
   h3 {
-    margin-top: 1em;
+    margin: 1em 0;
   }
 }
 
@@ -218,14 +227,6 @@ form {
 
 form#new_score {
   margin-bottom: 0;
-  
-  h3 {
-    margin-bottom: 9px;
-  }
-  
-  p {
-    text-align: justify;
-  }
   
   textarea#score_music {
     font-size: 1.5em;
