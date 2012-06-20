@@ -16,4 +16,22 @@ en:
     cookies:
       title: "Cookies and Tracking"
       body: "We allow third-party companies, including AddThis, to collect certain anonymous information when you visit our website. These companies may use non-personally identifiable information during your visits to this and other websites in order to provide advertisements about goods and services likely to be of greater interest to you. These companies typically use a cookie or a third party web beacon to collect this information. To learn more about this behavioral advertising practice, you can visit <a href='http://www.networkadvertising.org'>www.networkadvertising.org</a>."
-
+  score:
+    form:
+      introduction: "All you need to do is to add Music ♬. But you can fill in the other fields, too, if you like. We use the excellent <a href='http://lilypond.org/'>LilyPond</a> music notation engine (a slightly-modified <a href='http://lilypond.org/doc/v2.12/Documentation/user/lilypond/Writing-pitches#Note-names-in-other-languages'>English variant</a>), so <a href='http://lilypond.org/text-input.html'>all sorts of musical magic is possible</a>. Take a look at our examples, too."
+      music_placeholder: "c d8 e f g a b c1"
+      title: "Engrave a new score. ☆"
+      legal: "By clicking <strong>Engrave ↣</strong>, I confirm that I own the copyright to the content I am submitting and license tunefl.com to use it, or that the content is suitably licensed, or that the content is in the public domain."
+      donotsteal: "Encourage the arts. Please do not steal."
+  activerecord:
+    attributes:
+      score:
+        title: "Title ❞"
+        composer: "Composer ♙"
+        copyright: "Copyright ©"
+        music: "Music ♬"
+  helpers:
+    submit:
+      score:
+        create: "Engrave ↣"
+  

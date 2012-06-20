@@ -8,6 +8,8 @@ Tunefl::Application.routes.draw do
     
     devise_for :admin_users, ActiveAdmin::Devise.config
     
+    resources :scores, :only => [:show, :create]
+    
     root :to => 'statics#index'
   end
   
