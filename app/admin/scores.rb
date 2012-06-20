@@ -11,6 +11,7 @@ ActiveAdmin.register Score do
     column :title
     column :composer
     column :copyright
+    column :music
     column :created_at
     
     default_actions
