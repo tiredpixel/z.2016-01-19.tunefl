@@ -1,0 +1,14 @@
+<% content_for :whole do %>
+  <% cache("views/scores/#{@score.id}/show", :expires_in => 1.hour) { %>
+    <div class='score show'>
+      <div class='main preview'>
+        <%= image_tag("scores/c_major_scale.png") %>
+      </div>
+      
+      <div class='main'>
+        <p class='music'><%= @score.music %></p>
+      </div>
+    </div>
+  <% } %>
+<% end %>
+
