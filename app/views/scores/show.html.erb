@@ -1,12 +1,6 @@
 <% content_for :whole do %>
   <% cache("views/scores/#{@score.id}/show", :expires_in => 1.hour) { %>
-    <div class='score show'>
-      <div class='main preview'>
-        <%= image_tag("scores/c_major_scale.png") %>
-        
-        <p class='music'><%= @score.music %></p>
-      </div>
-    </div>
+    <%= render :partial => "shared/score", :locals => { :preview => "scores/c_major_scale.png", :music => @score.music } %>
   <% } %>
 <% end %>
 
