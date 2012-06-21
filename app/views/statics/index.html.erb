@@ -1,5 +1,9 @@
 <% content_for :left do %>
   <%= render :partial => "shared/about" %>
+  
+  <%= render :partial => "shared/score", :locals => { :preview => "scores/eg1.png", :music => "\\relative c' { c d8 e f g a b c1 }" } %>
+  
+  <%= render :partial => "shared/score", :locals => { :preview => "scores/eg2.png", :music => "\\relative c { \\clef bass \\key c \\minor \\time 3/4 <c ef g> <c ef f> <c d f> <b d f> <c c,>2 }" } %>
 <% end %>
 
 <% content_for :right do %>
