@@ -1,0 +1,14 @@
+\version "2.14.2"
+\language "english"
+\book {
+  \score {
+    \new Staff \with {midiInstrument = #"acoustic grand"} {
+      \new Voice {
+        <%= score.music %>
+      }
+    }
+    \layout { }
+    \midi { }
+  }
+}
+

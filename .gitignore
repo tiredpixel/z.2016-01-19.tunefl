@@ -16,3 +16,7 @@
 
 # Ignore config files where a .example file is provided.
 /config/database.yml
+
+# Ignore local uploads
+/public/uploads
+
