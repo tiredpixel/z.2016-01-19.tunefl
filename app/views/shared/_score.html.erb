@@ -1,6 +1,20 @@
-<div class='score'>
-  <%= image_tag(preview) %>
-  
-  <p class='music'><%= music %></p>
-</div>
+<% if preview && music %>
+  <div class='score'>
+    <%= image_tag(preview) %>
+    
+    <p class='music'><%= music %></p>
+    
+    <% if midi %>
+      <p class='music'><%= link_to(t('activerecord.attributes.score.midi'), midi) %></p>
+    <% end %>
+  </div>
+<% else %>
+  <div class='about main'>
+    <h1><%= t('score.show.title') %></h1>
+    
+    <h3><%=raw t('score.show.subtitle') %></h3>
+    
+    <p><%=raw t('score.show.refresh') %></p>
+  </div>
+<% end %>
 

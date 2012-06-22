@@ -26,6 +26,10 @@ en:
       title: "Engrave a new score. ☆"
       legal: "By clicking <strong>Engrave ↣</strong>: I confirm that I own the copyright to the content I am submitting and license tunefl.com to use it, or that the content is suitably licensed, or that the content is in the public domain; I agree to the tunefl.com <a href='/legal'>terms of use</a>."
       donotsteal: "Encourage the arts. Please do not steal."
+    show:
+      title: "We're currently making music! ♬"
+      subtitle: "Check back here in a minute or so, and, if all is well, a beautiful score will here appear! :D"
+      refresh: "<a href=''>Click here</a> to see if we're done, yet."
   activerecord:
     attributes:
       score:
@@ -33,6 +37,7 @@ en:
         composer: "Composer ♙"
         copyright: "Copyright ©"
         music: "Music ♬"
+        midi: "MIDI"
   helpers:
     submit:
       score:

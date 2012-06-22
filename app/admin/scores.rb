@@ -12,18 +12,29 @@ ActiveAdmin.register Score do
     column :composer
     column :copyright
     column :music
+    column :preview
+    column :midi
     column :created_at
     
     default_actions
   end
   
-  show do |user|
+  show do |score|
     attributes_table do
       row :id
       row :title
       row :composer
       row :copyright
       row :music
+      row :preview do
+        link_to(score.preview.url, score.preview.url)
+      end
+      row :preview do
+        image_tag(score.preview.url)
+      end
+      row :midi do
+        link_to(score.midi.url, score.midi.url)
+      end
       row :blocked
       row :created_at
       row :updated_at
