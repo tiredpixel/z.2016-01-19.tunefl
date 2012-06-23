@@ -18,5 +18,17 @@ xml.urlset :xmlns => 'http://www.sitemaps.org/schemas/sitemap/0.9' do
     xml.loc legal_url
   end
   
+  
+  # = scores
+  
+  Score.find_each do |score|
+    if score.preview && score.music
+      xml.url do
+        xml.loc thing_url(score)
+        xml.lastmod score.updated_at.strftime('%Y-%m-%d')
+      end
+    end
+  end
+  
 end
 
