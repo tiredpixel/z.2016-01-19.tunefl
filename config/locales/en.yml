@@ -30,7 +30,7 @@ en:
       pending:
         title: "We're currently making music! ♬"
         subtitle: "Check back here in a minute or so, and, if all is well, a beautiful score will here appear! :D"
-        refresh: "<a href=''>Click here</a> to see if we're done, yet."
+        refresh: "We'll reload this page every 15 seconds, until we know what to make of your music.<br />Or <a href=''>click here</a>, if you're impatient."
       unusable:
         title: "The music was a little too experimental! ⚠"
         subtitle: "Sorry; we couldn't engrave the music. :("
