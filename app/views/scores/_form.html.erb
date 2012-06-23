@@ -1,48 +1,50 @@
-<% @score = Score.new if !@score %>
-
-<%= form_for @score do |f| %>
-  <h3><%=raw t 'score.form.title' %></h3>
+<% cache("views/scores/_form", :expires_in => 1.hour) { %>
+  <% @score = Score.new if !@score %>
   
-  <p class='help-block'><%=raw t 'score.form.introduction' %></p>
-  
-  <div class='control-group'>
-    <%= f.label :title, :class => 'control-label' %>
+  <%= form_for @score do |f| %>
+    <h3><%=raw t 'score.form.title' %></h3>
     
-    <div class='controls'>
-      <%= f.text_field :title %>
+    <p class='help-block'><%=raw t 'score.form.introduction' %></p>
+    
+    <div class='control-group'>
+      <%= f.label :title, :class => 'control-label' %>
+      
+      <div class='controls'>
+        <%= f.text_field :title %>
+      </div>
     </div>
-  </div>
-  
-  <div class='control-group'>
-    <%= f.label :composer, :class => 'control-label' %>
     
-    <div class='controls'>
-      <%= f.text_field :composer %>
+    <div class='control-group'>
+      <%= f.label :composer, :class => 'control-label' %>
+      
+      <div class='controls'>
+        <%= f.text_field :composer %>
+      </div>
     </div>
-  </div>
-  
-  <div class='control-group'>
-    <%= f.label :copyright, :class => 'control-label' %>
     
-    <div class='controls'>
-      <%= f.text_field :copyright %>
+    <div class='control-group'>
+      <%= f.label :copyright, :class => 'control-label' %>
+      
+      <div class='controls'>
+        <%= f.text_field :copyright %>
+      </div>
     </div>
-  </div>
-  
-  <div class='control-group'>
-    <%= f.label :music, :class => 'control-label' %>
     
-    <div class='controls'>
-      <%=raw f.text_area :music, :placeholder => t('score.form.music_placeholder') %>
+    <div class='control-group'>
+      <%= f.label :music, :class => 'control-label' %>
+      
+      <div class='controls'>
+        <%=raw f.text_area :music, :placeholder => t('score.form.music_placeholder') %>
+      </div>
     </div>
-  </div>
-  
-  <div class='actions'>
-    <p class='help-block'><%=raw t 'score.form.legal' %></p>
     
-    <p class='help-block'><em><%=raw t 'score.form.donotsteal' %></em></p>
-    
-    <%= f.submit :class => 'btn btn-primary btn-' %>
-  </div>
-<% end %>
+    <div class='actions'>
+      <p class='help-block'><%=raw t 'score.form.legal' %></p>
+      
+      <p class='help-block'><em><%=raw t 'score.form.donotsteal' %></em></p>
+      
+      <%= f.submit :class => 'btn btn-primary btn-' %>
+    </div>
+  <% end %>
+<% } %>
 

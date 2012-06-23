@@ -10,8 +10,12 @@
 <% end %>
 
 <% content_for :whole do %>
-  <% cache("views/scores/#{@score.id}/show", :expires_in => 1.hour) { %>
+  <% if @score.preview && @score.music %>
+    <% cache("views/scores/#{@score.id}/show", :expires_in => 1.hour) { %>
+      <%= render :partial => "shared/score", :locals => { :score => @score } %>
+    <% } %>
+  <% else %>
     <%= render :partial => "shared/score", :locals => { :score => @score } %>
-  <% } %>
+  <% end %>
 <% end %>
 
