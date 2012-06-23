@@ -2,7 +2,7 @@ class ScoresController < ApplicationController
   def show
     @score = Score.unblocked.find(params[:id])
     
-    if @score && @score.music && @score.preview
+    if @score.usable
       expires_in 1.hour, :public => true
     end
   end

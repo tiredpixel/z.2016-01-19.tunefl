@@ -7,35 +7,25 @@
   <% midi       ||= score.midi.url %>
 <% end %>
 
-<% if preview && music %>
-  <div class='score'>
-    <% if title %>
-      <h1 class='title'><%= title %></h1>
-    <% end %>
-    
-    <% if composer %>
-      <h4 class='composer'><%= composer %></h4>
-    <% end %>
-    
-    <%= image_tag(preview) %>
-    
-    <% if copyright %>
-      <p class='copyright'><%= copyright %></p>
-    <% end %>
-    
-    <p class='music'><%= music %></p>
-    
-    <% if midi %>
-      <p class='links'><%= link_to(t('activerecord.attributes.score.midi'), midi) %></p>
-    <% end %>
-  </div>
-<% else %>
-  <div class='about main'>
-    <h1><%= t('score.show.title') %></h1>
-    
-    <h3><%=raw t('score.show.subtitle') %></h3>
-    
-    <p><%=raw t('score.show.refresh') %></p>
-  </div>
-<% end %>
+<div class='score'>
+  <% if title %>
+    <h1 class='title'><%= title %></h1>
+  <% end %>
+  
+  <% if composer %>
+    <h4 class='composer'><%= composer %></h4>
+  <% end %>
+  
+  <%= image_tag(preview) %>
+  
+  <% if copyright %>
+    <p class='copyright'><%= copyright %></p>
+  <% end %>
+  
+  <p class='music'><%= music %></p>
+  
+  <% if midi %>
+    <p class='links'><%= link_to(t('activerecord.attributes.score.midi'), midi) %></p>
+  <% end %>
+</div>
 

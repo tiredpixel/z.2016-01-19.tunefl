@@ -23,12 +23,20 @@ class Score < ActiveRecord::Base
     Resque.enqueue(CompileScoreJob, self.id)
   end
   
+  scope :unblocked,
+    where(:blocked => false)
   
   scope :blocked,
     where(:blocked => true)
   
-  scope :unblocked,
-    where(:blocked => false)
+  scope :pending,
+    where(:usable => nil)
+  
+  scope :usable,
+    where(:usable => true)
+  
+  scope :unusable,
+    where(:usable => false)
   
 end
 

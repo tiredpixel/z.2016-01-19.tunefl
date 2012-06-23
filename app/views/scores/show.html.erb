@@ -10,12 +10,27 @@
 <% end %>
 
 <% content_for :whole do %>
-  <% if @score.preview && @score.music %>
+  <% case @score.usable %>
+  <% when true %>
     <% cache("views/scores/#{@score.id}/show", :expires_in => 1.hour) { %>
       <%= render :partial => "shared/score", :locals => { :score => @score } %>
     <% } %>
-  <% else %>
-    <%= render :partial => "shared/score", :locals => { :score => @score } %>
+  <% when nil %>
+    <div class='about main'>
+      <h1><%= t('score.show.pending.title') %></h1>
+      
+      <h3><%=raw t('score.show.pending.subtitle') %></h3>
+      
+      <p><%=raw t('score.show.pending.refresh') %></p>
+    </div>
+  <% when false %>
+    <div class='about main'>
+      <h1><%= t('score.show.unusable.title') %></h1>
+      
+      <h3><%=raw t('score.show.unusable.subtitle') %></h3>
+      
+      <p><%=raw t('score.show.unusable.contact') %></p>
+    </div>
   <% end %>
 <% end %>
 

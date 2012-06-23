@@ -3,6 +3,9 @@ ActiveAdmin.register Score do
   actions :index, :show, :edit, :update
   
   scope :all, :default => true
+  scope :pending
+  scope :usable
+  scope :unusable
   scope :unblocked
   scope :blocked
   
@@ -14,6 +17,7 @@ ActiveAdmin.register Score do
     column :music
     column :preview
     column :midi
+    column :usable
     column :created_at
     
     default_actions
@@ -35,6 +39,7 @@ ActiveAdmin.register Score do
       row :midi do
         link_to(score.midi.url, score.midi.url)
       end
+      row :usable
       row :blocked
       row :created_at
       row :updated_at

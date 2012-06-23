@@ -27,9 +27,14 @@ en:
       legal: "By clicking <strong>Engrave ↣</strong>: I confirm that I own the copyright to the content I am submitting and license tunefl.com to use it, or that the content is suitably licensed, or that the content is in the public domain; I agree to the tunefl.com <a href='/legal'>terms of use</a>."
       donotsteal: "Encourage the arts. Please do not steal."
     show:
-      title: "We're currently making music! ♬"
-      subtitle: "Check back here in a minute or so, and, if all is well, a beautiful score will here appear! :D"
-      refresh: "<a href=''>Click here</a> to see if we're done, yet."
+      pending:
+        title: "We're currently making music! ♬"
+        subtitle: "Check back here in a minute or so, and, if all is well, a beautiful score will here appear! :D"
+        refresh: "<a href=''>Click here</a> to see if we're done, yet."
+      unusable:
+        title: "The music was a little too experimental! ⚠"
+        subtitle: "Sorry; we couldn't engrave the music. :("
+        contact: "Maybe it's your fault. Maybe it's ours. If the former, please <a href='/'>create a new score</a>, with valid syntax. If the latter, we apologise profusely.<br />In either case, please feel free to wave to us <a href='http://twitter.com/tunefl'>@tunefl</a> with a link to this page, and we'll do our best to explain. :)<br />(Or, if you haven't built a Twitter-nest, then <a href='mailto:en@tunefl.com'>email</a>.)"
   activerecord:
     attributes:
       score:

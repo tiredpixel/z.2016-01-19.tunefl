@@ -17,11 +17,23 @@ class CompileScoreJob
       :preview_png  => tmpdir.join("#{id}.preview.png"),
     }
     
-    CompileScoreJob::generate_lilypond(score, files)
+    begin
+      CompileScoreJob::generate_lilypond(score, files)
+      
+      CompileScoreJob::compile_lilypond(score, files)
+      
+      CompileScoreJob::cleanup(files)
+    rescue Exception => e
+      score.usable = false
+      
+      score.save
+      
+      raise e
+    end
     
-    CompileScoreJob::compile_lilypond(score, files)
+    score.usable = true
     
-    CompileScoreJob::cleanup(files)
+    score.save
   end
   
   def self.generate_lilypond(score, files)
