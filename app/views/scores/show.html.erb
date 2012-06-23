@@ -1,6 +1,6 @@
 <% content_for :whole do %>
   <% cache("views/scores/#{@score.id}/show", :expires_in => 1.hour) { %>
-    <%= render :partial => "shared/score", :locals => { :music => @score.music, :preview => @score.preview.url, :midi => @score.midi.url } %>
+    <%= render :partial => "shared/score", :locals => { :score => @score } %>
   <% } %>
 <% end %>
 
