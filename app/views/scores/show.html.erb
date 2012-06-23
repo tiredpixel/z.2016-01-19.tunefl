@@ -1,3 +1,14 @@
+<% content_for :title do %>
+  <% title = "" %>
+  <% title += @score.title unless @score.title.empty? %>
+  <% title += " " unless title.empty? %>
+  <% title += "(#{@score.composer})" unless @score.composer.empty? %>
+  <% title += " | " unless title.empty? %>
+  <% title += t('title') %>
+  
+  <%= title %>
+<% end %>
+
 <% content_for :whole do %>
   <% cache("views/scores/#{@score.id}/show", :expires_in => 1.hour) { %>
     <%= render :partial => "shared/score", :locals => { :score => @score } %>
