@@ -4,7 +4,7 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
-  title: "tunefl ['tjuːnfʊl]"
+  title: "@tunefl ♩"
   footer:
     copyright: "© Copyright tunefl.com & @tiredpixel 2012"
     tiredpixel: "More sleep lost by @tiredpixel."
