@@ -7,6 +7,14 @@
     <p class='help-block'><%=raw t 'score.form.introduction' %></p>
     
     <div class='control-group'>
+      <%= f.label :music, :class => 'control-label' %>
+      
+      <div class='controls'>
+        <%=raw f.text_area :music %>
+      </div>
+    </div>
+    
+    <div class='control-group'>
       <%= f.label :title, :class => 'control-label' %>
       
       <div class='controls'>
@@ -30,13 +38,7 @@
       </div>
     </div>
     
-    <div class='control-group'>
-      <%= f.label :music, :class => 'control-label' %>
-      
-      <div class='controls'>
-        <%=raw f.text_area :music, :placeholder => t('score.form.music_placeholder') %>
-      </div>
-    </div>
+    
     
     <div class='actions'>
       <p class='help-block'><%=raw t 'score.form.legal' %></p>
