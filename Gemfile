@@ -42,6 +42,8 @@ group :test, :development do
   gem 'rspec-rails'
   gem 'shoulda-matchers'
   gem 'factory_girl_rails'
+  
+  gem 'foreman'
 end
 
 # To use ActiveModel has_secure_password
