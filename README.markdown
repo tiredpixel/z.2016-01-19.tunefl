@@ -49,14 +49,25 @@ then contribute:
 Contributing
 ------------
 
-Contributions are embraced with much love and affection. Please fork the
+Contributions are embraced with much love and affection! Please fork the
 repository and do your magic, ensuring that any tests are not broken by the
 changes. Then send a pull request. Simples! If you'd like to discuss what you're
 doing or planning to do, or if you get stuck on something, then just wave. :)
 
-Priorities are stablising and refactoring what's already been released, writing
-tests (!), and improving this documentation ;) - but do whatever makes you
-happy. :)
+For your fascination, the repository branch structure is as follows:
+
+- master : The latest 'stable' code, not guaranteed in the least to be stable ;)
+  but as run on [tunefl.com](http://tunefl.com).
+
+- develop : The 'edge' code. This is normally the branch you'll want to branch
+  from.
+
+- feature/* : One branch per 'feature', prepended with an issue-number, ideally.
+  e.g. feature/123-leafy-spiderplants.
+
+Priorities are stablising and refactoring what's already been released :) and
+writing tests :! - but do whatever makes you happy. :) We'll probably still
+like you.
 
 
 License
