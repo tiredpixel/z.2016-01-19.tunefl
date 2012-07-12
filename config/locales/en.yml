@@ -19,6 +19,10 @@ en:
     copyright:
       title: "Copyright"
       body: "We ask that users submitting content confirm that they own the copyright to the content they submit and license tunefl.com to use it, or that the content is suitably licensed, or that the content is in the public domain. We reserve the right to unpublish content from tunefl.com, if we choose. If you believe that content for which you own the copyright has been used without your permission, then please <a href='mailto:en@tunefl.com'>contact us</a>. <em>Encourage the arts. Please do not steal.</em>"
+    license:
+      title: "License"
+      body: "© Copyright tunefl.com & @tiredpixel 2012 ♮ tunefl is free software, released
+under <a href='https://github.com/tiredpixel/tunefl/blob/master/LICENSE'>the MIT License</a>. ♮ The tunefl code is available on <a href='https://gihub.com/tiredpixel/tunefl'>GitHub</a>. Contributions are embraced with much love and affection! :D"
   score:
     form:
       introduction: "All you need to do is to add Music ♬. But you can fill in the other fields, too, if you like. Take a look at our examples on this page; underneath each score is written the text which generated it. ♮ We use the excellent <a href='http://lilypond.org/'>LilyPond</a> music notation engine (<a href='http://lilypond.org/doc/v2.12/Documentation/user/lilypond/Writing-pitches#Note-names-in-other-languages'>English variant</a>), so <a href='http://lilypond.org/text-input.html'>all sorts of musical magic is possible</a>."
