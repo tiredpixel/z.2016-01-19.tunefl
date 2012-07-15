@@ -9,7 +9,9 @@ class CompileScoreJob
   def self.perform(id)
     score = Score.find(id)
     
-    tmpdir = Rails.root.join('tmp', 'jobs', 'CompileScoreJob')
+    tmpdir = Rails.root.join('tmp', 'jobs', @queue.to_s)
+    
+    FileUtils.mkpath(tmpdir)
     
     files = {
       :lilypond     => tmpdir.join("#{id}.ly"),
