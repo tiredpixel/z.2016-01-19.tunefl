@@ -36,6 +36,7 @@ class Score < ActiveRecord::Base
     where(:usable => false)
   
   
+  # Enqueues Resque jobs after create.
   def enqueue_job
     Resque.enqueue(CompileScoreJob, self.id)
   end
