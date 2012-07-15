@@ -19,9 +19,6 @@ class Score < ActiveRecord::Base
   
   after_create :enqueue_job
   
-  def enqueue_job
-    Resque.enqueue(CompileScoreJob, self.id)
-  end
   
   scope :unblocked,
     where(:blocked => false)
@@ -37,6 +34,11 @@ class Score < ActiveRecord::Base
   
   scope :unusable,
     where(:usable => false)
+  
+  
+  def enqueue_job
+    Resque.enqueue(CompileScoreJob, self.id)
+  end
   
 end
 
