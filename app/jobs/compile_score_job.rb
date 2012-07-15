@@ -6,6 +6,7 @@ class CompileScoreJob
   
   @queue = :compile_score_job
   
+  # Performs the queued job.
   def self.perform(id)
     score = Score.find(id)
     
@@ -40,6 +41,7 @@ class CompileScoreJob
     end
   end
   
+  # Generates the LilyPond source file.
   def self.generate_lilypond(score, files)
     lilypond_data = ERB.new(File.read(
       Rails.root.join('app', 'views', 'erb', 'lilypond.ly.erb')
@@ -52,6 +54,7 @@ class CompileScoreJob
     score.save
   end
   
+  # Compiles the LilyPond source file.
   def self.compile_lilypond(score, files)
     output = `lilypond -dsafe -dresolution=150 -dpreview --png --output #{File.dirname(files[:lilypond])} #{files[:lilypond]} 2>&1`
     
