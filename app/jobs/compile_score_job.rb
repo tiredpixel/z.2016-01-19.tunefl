@@ -1,5 +1,7 @@
 require 'erb'
 
+class LilyPondException < Exception; end
+
 class CompileScoreJob
   
   @queue = :compile_score_job
@@ -49,7 +51,9 @@ class CompileScoreJob
   end
   
   def self.compile_lilypond(score, files)
-    `lilypond -dsafe -dresolution=150 -dpreview --png --output #{File.dirname(files[:lilypond])} #{files[:lilypond]}`
+    output = `lilypond -dsafe -dresolution=150 -dpreview --png --output #{File.dirname(files[:lilypond])} #{files[:lilypond]} 2>&1`
+    
+    raise LilyPondException, output unless $?.success?
     
     score.preview = File.open(files[:preview_png])
     
