@@ -45,6 +45,11 @@ then contribute:
 - If you want to monitor the queue, run `resque-web`, then visit
   http://localhost:5678.
 
+- Tests are written using [RSpec](http://rspec.info/),
+  [shoulda](https://github.com/thoughtbot/shoulda/), and
+  [factory_girl](https://github.com/thoughtbot/factory_girl/). Migrate the test
+  database using `rake test:prepare`, and run the tests using `rspec`.
+
 
 Contributing
 ------------
