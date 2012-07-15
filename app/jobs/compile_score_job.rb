@@ -21,6 +21,10 @@ class CompileScoreJob
       CompileScoreJob::generate_lilypond(score, files)
       
       CompileScoreJob::compile_lilypond(score, files)
+      
+      score.usable = true
+      
+      score.save
     rescue Exception => e
       score.usable = false
       
@@ -30,10 +34,6 @@ class CompileScoreJob
     ensure
       files.each { |k, v| FileUtils.rm(v) if File.exists?(v) }
     end
-    
-    score.usable = true
-    
-    score.save
   end
   
   def self.generate_lilypond(score, files)
