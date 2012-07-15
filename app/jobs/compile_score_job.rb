@@ -21,14 +21,14 @@ class CompileScoreJob
       CompileScoreJob::generate_lilypond(score, files)
       
       CompileScoreJob::compile_lilypond(score, files)
-      
-      CompileScoreJob::cleanup(files)
     rescue Exception => e
       score.usable = false
       
       score.save
       
       raise e
+    ensure
+      files.each { |k, v| FileUtils.rm(v) if File.exists?(v) }
     end
     
     score.usable = true
@@ -56,10 +56,6 @@ class CompileScoreJob
     score.midi = File.open(files[:midi])
     
     score.save
-  end
-  
-  def self.cleanup(files)
-    files.each { |k, v| FileUtils.rm(v) }
   end
   
 end
