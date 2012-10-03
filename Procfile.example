@@ -1,2 +1,3 @@
 web: bundle exec rails server
 job: bundle exec rake resque:work
+log: tail -f -n 0 log/development.log
