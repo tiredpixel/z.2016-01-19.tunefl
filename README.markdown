@@ -8,7 +8,7 @@ tunefl is a fabarooney musical web-application which runs
 provided by [tunefl.com](http://tunefl.com). If you're a tweetling, you might
 like to follow [@tunefl](http://twitter.com/tunefl).
 
-More sleep lost by [@tiredpixel](http://twitter.com/tiredpixel).
+More sleep lost by [tiredpixel](http://www.tiredpixel.com).
 
 
 Installing
@@ -79,7 +79,7 @@ License
 -------
 
 Copyright © 2012 [tunefl.com](http://tunefl.com) &
-[@tiredpixel](http://twitter.com/tiredpixel). It is free software, released
+[tiredpixel](http://www.tiredpixel.com). It is free software, released
 under the MIT License, and may be redistributed under the terms specified in
 `LICENSE`.
 
