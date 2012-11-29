@@ -23,3 +23,6 @@
 # Ignore foreman files.
 /Procfile
 /*.env
+
+# Ignore documentation.
+.yardoc/

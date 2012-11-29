@@ -50,6 +50,10 @@ then contribute:
   [factory_girl](https://github.com/thoughtbot/factory_girl/). Migrate the test
   database using `rake test:prepare`, and run the tests using `rspec`.
 
+- Documentation is written using [YARD](http://yardoc.org/). To generate and
+  run documentation during development, run `yard server --reload`, and visit
+  <http://localhost:8808>.
+
 
 Contributing
 ------------
