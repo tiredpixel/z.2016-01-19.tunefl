@@ -12,7 +12,12 @@ class ScoresController < ApplicationController
   
   # POST /:locale/scores
   def create
-    @score = Score.new(params[:score])
+    @score = Score.new
+    
+    @score.title     ||= params[:score][:title]     rescue nil
+    @score.composer  ||= params[:score][:composer]  rescue nil
+    @score.copyright ||= params[:score][:copyright] rescue nil
+    @score.music     ||= params[:score][:music]     rescue nil
     
     if @score.save
       redirect_to @score
