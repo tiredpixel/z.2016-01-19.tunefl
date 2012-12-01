@@ -1,9 +1,9 @@
-RSpec::Matchers.define :be_accessible do |attribute|
+RSpec::Matchers.define :have_accessible do |attribute|
   match do |response|
     response.class.accessible_attributes.include?(attribute)
   end
   
-  description { "be accessible :#{attribute}" }
+  description { "have accessible :#{attribute}" }
   
   failure_message_for_should { ":#{attribute} should be accessible" }
   
