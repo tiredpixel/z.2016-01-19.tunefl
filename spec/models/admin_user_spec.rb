@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe AdminUser do
   
-  context "Attributes" do
+  context "Instance Attributes" do
     it { should have_protected :id }
     
     it { should have_protected :created_at }
@@ -28,13 +28,12 @@ describe AdminUser do
     it { should have_protected :current_sign_in_ip }
     
     it { should have_protected :last_sign_in_ip }
-    
   end
   
-  
-  context "Defaults" do
-    it { AdminUser.new.sign_in_count.should == 0 }
+  context "Instance Attributes Defaults" do
+    it "should set default :sign_in_count to 0" do
+      AdminUser.new.sign_in_count.should == 0
+    end
   end
   
 end
-
