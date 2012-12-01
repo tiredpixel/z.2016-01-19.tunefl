@@ -1,5 +1,6 @@
 require 'erb'
 
+# +LilyPondException+ is a problem with executing shell command +lilypond+.
 class LilyPondException < Exception; end
 
 class CompileScoreJob
