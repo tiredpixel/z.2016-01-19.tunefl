@@ -4,6 +4,7 @@ describe 'Factories' do
   
   factories = [
     :admin_user,
+    :score,
   ]
   
   context "Validity" do
