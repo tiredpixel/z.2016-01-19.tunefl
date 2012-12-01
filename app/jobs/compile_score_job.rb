@@ -3,11 +3,18 @@ require 'erb'
 # +LilyPondException+ is a problem with executing shell command +lilypond+.
 class LilyPondException < Exception; end
 
+# +CompileScoreJob+ processes a job from the queue, compiling +Score+ using
+# shell command +lilypond+. It stores resultant LilyPond, MIDI, and preview
+# files.
 class CompileScoreJob
   
   @queue = :compile_score_job
   
+  
   # Performs the queued job.
+  #
+  # @param [Integer] id ID of +Score+ to be processed.
+  # @return [void]
   def self.perform(id)
     score = Score.find(id)
     
@@ -43,6 +50,11 @@ class CompileScoreJob
   end
   
   # Generates the LilyPond source file.
+  #
+  # @param [Score] score +Score+ to use for generation.
+  # @param [Hash] files Temporary filenames to use in processing.
+  # @option files [Symbol] :lilypond Filename of temporary LilyPond file.
+  # @return [Boolean] Whether +Score+ save was successful.
   def self.generate_lilypond(score, files)
     lilypond_data = ERB.new(File.read(
       Rails.root.join('app', 'views', 'erb', 'lilypond.ly.erb')
@@ -56,6 +68,13 @@ class CompileScoreJob
   end
   
   # Compiles the LilyPond source file.
+  #
+  # @param [Score] score +Score+ to use for generation.
+  # @param [Hash] files Temporary filenames to use in processing.
+  # @option files [Symbol] :lilypond Filename of temporary LilyPond file.
+  # @option files [Symbol] :preview_png Filename of temporary preview file.
+  # @option files [Symbol] :midi Filename of temporary MIDI file.
+  # @return [Boolean] Whether +Score+ save was successful.
   def self.compile_lilypond(score, files)
     output = `lilypond -dsafe -dresolution=150 -dpreview --png --output #{File.dirname(files[:lilypond])} #{files[:lilypond]} 2>&1`
     
@@ -69,4 +88,3 @@ class CompileScoreJob
   end
   
 end
-
