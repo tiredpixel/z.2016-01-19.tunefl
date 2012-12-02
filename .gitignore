@@ -25,4 +25,6 @@
 /*.env
 
 # Ignore documentation.
-.yardoc/
+/.yardoc/
+/doc/
+
