@@ -10,6 +10,7 @@ gem 'pg'
 gem 'activeadmin'
 gem 'formtastic', '~> 2.1.1' # pin to work with activeadmin
 
+gem 'less-rails'
 gem 'twitter-bootstrap-rails'
 
 gem 'carrierwave'
