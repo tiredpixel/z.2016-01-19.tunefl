@@ -60,6 +60,7 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.4.0)
+    commonjs (0.2.6)
     daemons (1.1.9)
     devise (2.1.2)
       bcrypt-ruby (~> 3.0)
@@ -107,6 +108,11 @@ GEM
     kaminari (0.14.1)
       actionpack (>= 3.0.0)
       activesupport (>= 3.0.0)
+    less (2.2.1)
+      commonjs (~> 0.2.6)
+    less-rails (2.2.3)
+      actionpack (>= 3.1)
+      less (~> 2.2.0)
     libv8 (3.11.8.4)
     mail (2.4.4)
       i18n (>= 0.4.0)
@@ -252,6 +258,7 @@ DEPENDENCIES
   foreman
   formtastic (~> 2.1.1)
   jquery-rails
+  less-rails
   libv8 (~> 3.11.8)
   pg
   rack-google-analytics
