@@ -8,7 +8,7 @@ tunefl is a fabarooney musical web-application which runs
 provided by [tunefl.com](http://tunefl.com). If you're a tweetling, you might
 like to follow [@tunefl](http://twitter.com/tunefl).
 
-More sleep lost by [@tiredpixel](http://twitter.com/tiredpixel).
+More sleep lost by [tiredpixel](http://www.tiredpixel.com).
 
 
 Installing
@@ -50,6 +50,10 @@ then contribute:
   [factory_girl](https://github.com/thoughtbot/factory_girl/). Migrate the test
   database using `rake test:prepare`, and run the tests using `rspec`.
 
+- Documentation is written using [YARD](http://yardoc.org/). To generate and
+  run documentation during development, run `yard server --reload`, and visit
+  <http://localhost:8808>.
+
 
 Contributing
 ------------
@@ -79,7 +83,7 @@ License
 -------
 
 Copyright © 2012 [tunefl.com](http://tunefl.com) &
-[@tiredpixel](http://twitter.com/tiredpixel). It is free software, released
+[tiredpixel](http://www.tiredpixel.com). It is free software, released
 under the MIT License, and may be redistributed under the terms specified in
 `LICENSE`.
 
