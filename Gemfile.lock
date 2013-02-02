@@ -252,27 +252,27 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  activeadmin
-  carrierwave
+  activeadmin (~> 0.5.1)
+  carrierwave (~> 0.8.0)
   coffee-rails (~> 3.2.1)
-  factory_girl_rails
-  fog
-  foreman
+  factory_girl_rails (~> 4.1.0)
+  fog (~> 1.8.0)
+  foreman (~> 0.60.2)
   formtastic (~> 2.1.1)
-  jquery-rails
-  less-rails
+  jquery-rails (~> 2.1.4)
+  less-rails (~> 2.2.6)
   libv8 (~> 3.11.8)
-  pg
-  rack-google-analytics
+  pg (~> 0.14.1)
+  rack-google-analytics (~> 0.11.0)
   rails (= 3.2.11)
-  redcarpet
-  redis-rails
-  resque
-  rspec-rails
+  redcarpet (~> 2.2.2)
+  redis-rails (~> 3.2.3)
+  resque (~> 1.23.0)
+  rspec-rails (~> 2.12.1)
   sass-rails (~> 3.2.3)
-  shoulda-matchers
-  therubyracer
-  thin
-  twitter-bootstrap-rails
+  shoulda-matchers (~> 1.4.2)
+  therubyracer (~> 0.11.2)
+  thin (~> 1.5.0)
+  twitter-bootstrap-rails (~> 2.2.0)
   uglifier (>= 1.0.3)
-  yard
+  yard (~> 0.8.3)

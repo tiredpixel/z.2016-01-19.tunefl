@@ -5,18 +5,18 @@ gem 'rails', '3.2.11'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'pg'
+gem 'pg', '~> 0.14.1'
 
-gem 'activeadmin'
+gem 'activeadmin', '~> 0.5.1'
 gem 'formtastic', '~> 2.1.1' # pin to work with activeadmin
 
-gem 'less-rails'
-gem 'twitter-bootstrap-rails'
+gem 'less-rails', '~> 2.2.6'
+gem 'twitter-bootstrap-rails', '~> 2.2.0'
 
-gem 'carrierwave'
-gem 'fog'
+gem 'carrierwave', '~> 0.8.0'
+gem 'fog', '~> 1.8.0'
 
-gem 'resque'
+gem 'resque', '~> 1.23.0'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -25,30 +25,30 @@ group :assets do
   gem 'coffee-rails', '~> 3.2.1'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-  gem 'therubyracer', :platforms => :ruby
+  gem 'therubyracer', '~> 0.11.2', :platforms => :ruby
   gem 'libv8', '~> 3.11.8'
   
   gem 'uglifier', '>= 1.0.3'
 end
 
-gem 'jquery-rails'
+gem 'jquery-rails', '~> 2.1.4'
 
-gem 'rack-google-analytics', :require => 'rack/google-analytics'
+gem 'rack-google-analytics', '~> 0.11.0', :require => 'rack/google-analytics'
 
 group :production do
-  gem 'thin'
-  gem 'redis-rails'
+  gem 'thin', '~> 1.5.0'
+  gem 'redis-rails', '~> 3.2.3'
 end
 
 group :test, :development do
-  gem 'rspec-rails'
-  gem 'shoulda-matchers'
-  gem 'factory_girl_rails'
+  gem 'rspec-rails', '~> 2.12.1'
+  gem 'shoulda-matchers', '~> 1.4.2'
+  gem 'factory_girl_rails', '~> 4.1.0'
   
-  gem 'foreman'
+  gem 'foreman', '~> 0.60.2'
   
-  gem 'yard'
-  gem 'redcarpet'
+  gem 'yard', '~> 0.8.3'
+  gem 'redcarpet', '~> 2.2.2'
 end
 
 # To use ActiveModel has_secure_password
