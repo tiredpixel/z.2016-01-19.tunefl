@@ -1,0 +1,3 @@
+[submodule "spec/support/accessible_protected_matchers"]
+	path = spec/support/accessible_protected_matchers
+	url = https://gist.github.com/5217074.git
