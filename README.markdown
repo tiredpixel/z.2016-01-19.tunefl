@@ -17,6 +17,8 @@ Installing
 To run tunefl in development, so you can poke into dark corners, jump, hide,
 then contribute:
 
+- Update the [Git submodules](https://www.kernel.org/pub/software/scm/git/docs/git-submodule.html) using `git submodule update --init --recursive`.
+
 - Ensure [PostgreSQL](http://www.postgresql.org/) is installed and set up.
 
 - Ensure [Redis](http://redis.io/) is installed and set up.
