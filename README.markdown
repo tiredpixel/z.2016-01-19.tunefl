@@ -84,8 +84,7 @@ like you.
 License
 -------
 
-Copyright © 2012 [tunefl.com](http://tunefl.com) &
-[tiredpixel](http://www.tiredpixel.com). It is free software, released
+© [tunefl.com](http://tunefl.com) &
+[tiredpixel](http://www.tiredpixel.com) 2013. It is free software, released
 under the MIT License, and may be redistributed under the terms specified in
 `LICENSE`.
-
