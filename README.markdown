@@ -1,7 +1,7 @@
 tunefl
 ======
 
-![](http://tunefl.com/assets/logo-978062079879cb3fb28cf9c8d4ae5dfd.png)
+![](https://raw.github.com/tiredpixel/tunefl/master/app/assets/images/logo.png)
 
 tunefl is a fabarooney musical web-application which runs
 [LilyPond](http://lilypond.org) as a service. The live tunefl service is
