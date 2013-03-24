@@ -3,7 +3,7 @@ tunefl
 
 ![](https://raw.github.com/tiredpixel/tunefl/master/app/assets/images/logo.png)
 
-tunefl is a fabarooney musical web-application which runs [LilyPond](http://lilypond.org) as a service. The live tunefl service is provided by [tunefl.com](http://tunefl.com). If you're a tweetling, you might like to follow [@tunefl](http://twitter.com/tunefl).
+tunefl is a fabarooney musical web-application which runs [LilyPond](http://lilypond.org) as a service. The live tunefl service is provided by [tunefl.com](http://www.tunefl.com). If you're a tweetling, you might like to follow [@tunefl](http://twitter.com/tunefl).
 
 More sleep lost by [tiredpixel](http://www.tiredpixel.com).
 
@@ -68,7 +68,7 @@ The repository uses a [Git-Flow](http://nvie.com/posts/a-successful-git-branchin
 
 - [master](https://github.com/tiredpixel/tunefl/tree/master)
 
-  The latest stable code as run on [tunefl.com](http://tunefl.com).
+  The latest stable code as run on [tunefl.com](http://www.tunefl.com).
 
 - [develop](https://github.com/tiredpixel/tunefl/tree/develop)
 
@@ -88,7 +88,7 @@ May you find peace, and help others to do likewise.
 Licence
 -------
 
-© [tunefl.com](http://tunefl.com) &
+© [tunefl.com](http://www.tunefl.com) &
 [tiredpixel](http://www.tiredpixel.com) 2013. It is free software, released
 under the MIT License, and may be redistributed under the terms specified in
 `LICENSE`.
