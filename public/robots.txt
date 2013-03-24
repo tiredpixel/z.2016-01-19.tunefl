@@ -3,5 +3,4 @@
 # To ban all spiders from the entire site uncomment the next two lines:
 # User-Agent: *
 # Disallow: /
-Sitemap: http://tunefl.com/sitemap.xml
-
+Sitemap: http://www.tunefl.com/sitemap.xml
