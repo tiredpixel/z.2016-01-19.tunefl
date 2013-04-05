@@ -35,7 +35,6 @@ To run tunefl in development, so you can poke into dark corners, jump, hide, the
 
   - `config/database.yml.example` => `config/database.yml`
   - `.env.example` => `.env`
-  - `Procfile.example` => `Procfile`
 
 - Database
 
