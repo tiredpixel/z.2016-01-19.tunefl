@@ -21,7 +21,6 @@
 /public/uploads
 
 # Ignore foreman files.
-/Procfile
 /*.env
 
 # Ignore documentation.
