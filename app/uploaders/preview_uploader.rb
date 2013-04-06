@@ -6,8 +6,7 @@
 # file-based storage is used.
 class PreviewUploader < CarrierWave::Uploader::Base
   
-  storage (ENV['FOG_PROVIDER'].blank? ? :file : :fog)
-  
+  storage (ENV['FOG_CREDENTIALS'] ? :fog : :file)
   
   # Returns the path used for storage, which depends on which model mounts it.
   # Used by CarrierWave to set storage location.
