@@ -8,12 +8,10 @@ class ApplicationController < ActionController::Base
     I18n.locale = params[:locale] || I18n.default_locale
   end
   
-  def default_url_options(options={})
-    # FIXME: options isn't used!
+  def url_options
     {
-      # FIXME: I18n.locale was getting confused by assets...
-      :locale => I18n.default_locale
-    }
+      :locale => I18n.locale
+    }.merge(super)
   end
   
 end
