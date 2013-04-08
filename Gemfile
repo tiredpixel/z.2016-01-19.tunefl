@@ -46,9 +46,6 @@ group :test, :development do
   gem 'factory_girl_rails', '~> 4.2.1'
   
   gem 'foreman', '~> 0.62.0'
-  
-  gem 'yard', '~> 0.8.5.2'
-  gem 'redcarpet', '~> 2.2.2'
 end
 
 # To use ActiveModel has_secure_password

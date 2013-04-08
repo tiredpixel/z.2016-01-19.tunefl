@@ -24,7 +24,6 @@
 /*.env
 
 # Ignore documentation.
-/.yardoc/
 /doc/
 
 # Ignore static compiled assets.
