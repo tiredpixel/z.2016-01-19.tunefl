@@ -48,10 +48,6 @@ To run tunefl in development, so you can poke into dark corners, jump, hide, the
 
   Migrate the test database using `rake db:test:prepare`, then run all tests using `rspec`.
 
-- [YARD](http://yardoc.org)
-
-  Run a documentation server during development using `yard server --reload`, then visit <http://localhost:8808>.
-
 
 Contributions
 -------------
