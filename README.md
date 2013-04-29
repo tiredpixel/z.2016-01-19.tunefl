@@ -33,7 +33,6 @@ To run tunefl in development, so you can poke into dark corners, jump, hide, the
 
   Copy and edit as appropriate; no changes are needed, to run with file-storage instead of a CDN:
 
-  - `config/database.yml.example` => `config/database.yml`
   - `.env.example` => `.env`
 
 - Database
