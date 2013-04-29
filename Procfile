@@ -1,2 +1,2 @@
-web: bundle exec rails server -p $PORT
-job: bundle exec rake resque:work
+web:    bundle exec rails server -p $PORT
+worker: bundle exec sidekiq

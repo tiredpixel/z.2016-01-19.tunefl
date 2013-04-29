@@ -2,11 +2,11 @@ require 'erb'
 
 class LilyPondException < Exception; end
 
-class CompileScoreJob
+class CompileScoreWorker
   
-  @queue = :compile_score_job
+  include Sidekiq::Worker
   
-  def self.perform(id)
+  def perform(id)
     score = Score.find(id)
     
     tmpdir = Rails.root.join('tmp', 'jobs', @queue.to_s)
@@ -22,9 +22,9 @@ class CompileScoreJob
     }
     
     begin
-      CompileScoreJob::generate_lilypond(score, files)
+      CompileScoreWorker::generate_lilypond(score, files)
       
-      CompileScoreJob::compile_lilypond(score, files)
+      CompileScoreWorker::compile_lilypond(score, files)
       
       score.usable = true
       
