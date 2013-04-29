@@ -32,7 +32,7 @@ class Score < ActiveRecord::Base
     where(:usable => false)
   
   def enqueue_job
-    Resque.enqueue(CompileScoreJob, self.id)
+    CompileScoreWorker.perform_async(id)
   end
   
 end

@@ -47,7 +47,7 @@ describe Score do
       it "should enqueue job on Resque queue" do
         @s = FactoryGirl.create(:score)
         
-        Resque.should_receive(:enqueue).with(CompileScoreJob, @s.id)
+        CompileScoreWorker.should_receive(:perform_async).with(@s.id)
         
         @s.enqueue_job
       end
