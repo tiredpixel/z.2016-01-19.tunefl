@@ -3,6 +3,5 @@ Tunefl::Application.configure do
     :lib => 'rack/google-analytics'
   
   config.middleware.use Rack::GoogleAnalytics,
-    :tracker => (ENV['GOOGLE_ANALYTICS_TRACKER'] || "UA-00000000-1")
+    :tracker => (ENV['google_analytics_tracker'] || "UA-00000000-1")
 end
-

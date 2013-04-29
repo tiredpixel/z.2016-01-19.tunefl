@@ -1,12 +1,13 @@
 require 'carrierwave'
 require 'json'
 
-if ENV['FOG_CREDENTIALS']
+
+if ENV['fog_credentials']
   CarrierWave.configure do |config|
-    config.fog_credentials = JSON.parse(ENV['FOG_CREDENTIALS']).with_indifferent_access
+    config.fog_credentials = JSON.parse(ENV['fog_credentials']).with_indifferent_access
     
-    config.fog_directory = ENV['FOG_DIRECTORY']
+    config.fog_directory = ENV['fog_directory']
     
-    config.asset_host = ENV['ASSET_HOST']
+    config.asset_host = ENV['asset_host']
   end
 end
