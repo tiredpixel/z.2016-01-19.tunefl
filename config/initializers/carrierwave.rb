@@ -1,3 +1,4 @@
+require 'carrierwave'
 require 'json'
 
 if ENV['FOG_CREDENTIALS']
