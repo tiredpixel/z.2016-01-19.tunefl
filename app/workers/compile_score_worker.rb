@@ -1,6 +1,9 @@
+require 'tmpdir'
 require 'erb'
 
+
 class LilyPondException < Exception; end
+
 
 class CompileScoreWorker
   
@@ -9,16 +12,14 @@ class CompileScoreWorker
   def perform(id)
     score = Score.find(id)
     
-    tmpdir = Rails.root.join('tmp', 'jobs', @queue.to_s)
-    
-    FileUtils.mkpath(tmpdir)
+    tmpdir = Dir.mktmpdir
     
     files = {
-      :lilypond     => tmpdir.join("#{id}.ly"),
-      :midi         => tmpdir.join("#{id}.midi"),
-      :png          => tmpdir.join("#{id}.png"),
-      :preview_eps  => tmpdir.join("#{id}.preview.eps"),
-      :preview_png  => tmpdir.join("#{id}.preview.png"),
+      :lilypond     => File.join(tmpdir, "#{id}.ly"),
+      :midi         => File.join(tmpdir, "#{id}.midi"),
+      :png          => File.join(tmpdir, "#{id}.png"),
+      :preview_eps  => File.join(tmpdir, "#{id}.preview.eps"),
+      :preview_png  => File.join(tmpdir, "#{id}.preview.png"),
     }
     
     begin
@@ -36,7 +37,7 @@ class CompileScoreWorker
       
       raise e
     ensure
-      files.each { |k, v| FileUtils.rm(v) if File.exists?(v) }
+      FileUtils.remove_entry_secure tmpdir
     end
   end
   
