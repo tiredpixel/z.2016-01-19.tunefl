@@ -1,12 +1,13 @@
-CarrierWave.configure do |config|
-  config.fog_credentials = {
-    :provider           => ENV['FOG_PROVIDER'],
-    :rackspace_auth_url => ENV['FOG_RACKSPACE_AUTH_URL'],
-    :rackspace_username => ENV['FOG_RACKSPACE_USERNAME'],
-    :rackspace_api_key  => ENV['FOG_RACKSPACE_API_KEY'],
-  }
-  
-  config.fog_directory  = ENV['FOG_DIRECTORY']
-  config.asset_host     = ENV['FOG_HOST']
-end
+require 'carrierwave'
+require 'json'
 
+
+if ENV['fog_credentials']
+  CarrierWave.configure do |config|
+    config.fog_credentials = JSON.parse(ENV['fog_credentials']).with_indifferent_access
+    
+    config.fog_directory = ENV['fog_directory']
+    
+    config.asset_host = ENV['asset_host']
+  end
+end

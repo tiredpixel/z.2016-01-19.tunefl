@@ -11,6 +11,8 @@ More sleep lost by [tiredpixel](http://www.tiredpixel.com).
 Installation
 ------------
 
+Note that you'll probably want to load environment variables using `foreman`. This used to be optional, as everything defaulted, but now `DATABASE_URL` is needed. Thus, you'll probably want to use `foreman run rake` and `foreman run rspec`.
+
 To run tunefl in development, so you can poke into dark corners, jump, hide, then contribute:
 
 - [PostgreSQL](http://www.postgresql.org)
@@ -31,11 +33,9 @@ To run tunefl in development, so you can poke into dark corners, jump, hide, the
 
 - Config
 
-  Copy and edit as appropriate; no changes are needed, to run with file-storage instead of a CDN:
+  Copy and edit as appropriate; to run with file-storage instead of a CDN, you can leave `fog_credentials` unset. However, it is necessary to set `DATABASE_URL`.
 
-  - `config/database.yml.example` => `config/database.yml`
   - `.env.example` => `.env`
-  - `Procfile.example` => `Procfile`
 
 - Database
 
@@ -43,15 +43,11 @@ To run tunefl in development, so you can poke into dark corners, jump, hide, the
 
 - Run
 
-  Start the web-app and a worker using `foreman start`. Visit <http://localhost:3000>. To monitor the queue, run `resque-web`, then visit <http://localhost:5678>.
+  Start the web-app and a worker using `foreman start`. Visit <http://localhost:3000>.
 
 - [RSpec](http://rspec.info)
 
   Migrate the test database using `rake db:test:prepare`, then run all tests using `rspec`.
-
-- [YARD](http://yardoc.org)
-
-  Run a documentation server during development using `yard server --reload`, then visit <http://localhost:8808>.
 
 
 Contributions

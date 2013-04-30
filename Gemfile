@@ -16,7 +16,7 @@ gem 'twitter-bootstrap-rails', '~> 2.2.6'
 gem 'carrierwave', '~> 0.8.0'
 gem 'fog', '~> 1.10.0'
 
-gem 'resque', '~> 1.23.1'
+gem 'sidekiq', '~> 2.11.1'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -46,9 +46,6 @@ group :test, :development do
   gem 'factory_girl_rails', '~> 4.2.1'
   
   gem 'foreman', '~> 0.62.0'
-  
-  gem 'yard', '~> 0.8.5.2'
-  gem 'redcarpet', '~> 2.2.2'
 end
 
 # To use ActiveModel has_secure_password

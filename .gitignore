@@ -12,20 +12,18 @@
 
 # Ignore all logfiles and tempfiles.
 /log/*.log
-/tmp
+/tmp/
 
 # Ignore config files where a .example file is provided.
 /config/database.yml
 
 # Ignore local uploads
-/public/uploads
+/public/uploads/
 
 # Ignore foreman files.
-/Procfile
 /*.env
 
 # Ignore documentation.
-/.yardoc/
 /doc/
 
 # Ignore static compiled assets.
