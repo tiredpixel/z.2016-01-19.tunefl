@@ -1,6 +1,6 @@
 class LilypondUploader < CarrierWave::Uploader::Base
   
-  storage (ENV['fog_credentials'] ? :fog : :file)
+  storage (ENV['FOG_CREDENTIALS'] ? :fog : :file)
   
   def store_dir
     "uploads/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}"
