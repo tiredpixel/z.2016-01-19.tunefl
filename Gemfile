@@ -44,6 +44,7 @@ group :test, :development do
   gem 'rspec-rails', '~> 2.13.0'
   gem 'shoulda-matchers', '~> 1.5.1'
   gem 'factory_girl_rails', '~> 4.2.1'
+  gem 'database_cleaner', '~> 1.0.1'
   
   gem 'foreman'
 end
