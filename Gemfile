@@ -5,7 +5,7 @@ gem 'rails', '3.2.13'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'pg', '~> 0.14.1'
+gem 'pg', '~> 0.15.1'
 
 gem 'activeadmin', '~> 0.5.1'
 gem 'formtastic', '~> 2.1.1' # pin to work with activeadmin
@@ -14,9 +14,9 @@ gem 'less-rails', '~> 2.3.2'
 gem 'twitter-bootstrap-rails', '~> 2.2.6'
 
 gem 'carrierwave', '~> 0.8.0'
-gem 'fog', '~> 1.10.0'
+gem 'fog', '~> 1.12.1'
 
-gem 'sidekiq', '~> 2.11.1'
+gem 'sidekiq', '~> 2.12.4'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -36,7 +36,7 @@ gem 'jquery-rails', '~> 2.2.1'
 gem 'rack-google-analytics', '~> 0.11.0', :require => 'rack/google-analytics'
 
 group :production do
-  gem 'thin', '~> 1.5.1'
+  gem 'thin'
   gem 'redis-rails', '~> 3.2.3'
 end
 
@@ -44,8 +44,9 @@ group :test, :development do
   gem 'rspec-rails', '~> 2.13.0'
   gem 'shoulda-matchers', '~> 1.5.1'
   gem 'factory_girl_rails', '~> 4.2.1'
+  gem 'database_cleaner', '~> 1.0.1'
   
-  gem 'foreman', '~> 0.62.0'
+  gem 'foreman'
 end
 
 # To use ActiveModel has_secure_password
