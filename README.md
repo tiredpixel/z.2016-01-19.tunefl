@@ -7,6 +7,8 @@ tunefl is a fabarooney musical web-application which runs [LilyPond](http://lily
 
 More sleep lost by [tiredpixel](http://www.tiredpixel.com).
 
+[![Build Status](https://travis-ci.org/tiredpixel/tunefl.png?branch=master,develop)](https://travis-ci.org/tiredpixel/tunefl)
+
 
 Installation
 ------------
