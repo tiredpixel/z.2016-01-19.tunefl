@@ -36,7 +36,7 @@ gem 'jquery-rails', '~> 2.2.1'
 gem 'rack-google-analytics', '~> 0.11.0', :require => 'rack/google-analytics'
 
 group :production do
-  gem 'thin', '~> 1.5.1'
+  gem 'thin'
   gem 'redis-rails', '~> 3.2.3'
 end
 
@@ -45,7 +45,7 @@ group :test, :development do
   gem 'shoulda-matchers', '~> 1.5.1'
   gem 'factory_girl_rails', '~> 4.2.1'
   
-  gem 'foreman', '~> 0.62.0'
+  gem 'foreman'
 end
 
 # To use ActiveModel has_secure_password
