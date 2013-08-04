@@ -266,7 +266,6 @@ DEPENDENCIES
   formtastic (~> 2.1.1)
   jquery-rails (~> 2.2.1)
   less-rails (~> 2.3.2)
-  libv8 (~> 3.11.8)
   pg (~> 0.16.0)
   rack-google-analytics (~> 0.11.0)
   rails (= 3.2.14)
