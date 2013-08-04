@@ -1,11 +1,11 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.13'
+gem 'rails', '3.2.14'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'pg', '~> 0.15.1'
+gem 'pg', '~> 0.16.0'
 
 gem 'activeadmin', '~> 0.5.1'
 gem 'formtastic', '~> 2.1.1' # pin to work with activeadmin
@@ -13,8 +13,8 @@ gem 'formtastic', '~> 2.1.1' # pin to work with activeadmin
 gem 'less-rails', '~> 2.3.2'
 gem 'twitter-bootstrap-rails', '~> 2.2.6'
 
-gem 'carrierwave', '~> 0.8.0'
-gem 'fog', '~> 1.12.1'
+gem 'carrierwave', '~> 0.9.0'
+gem 'fog', '~> 1.14.0'
 
 gem 'sidekiq', '~> 2.12.4'
 
@@ -28,7 +28,7 @@ group :assets do
   gem 'therubyracer', '~> 0.11.2', :platforms => :ruby
   gem 'libv8', '~> 3.11.8'
   
-  gem 'uglifier', '>= 1.3.0'
+  gem 'uglifier', '>= 2.1.2'
 end
 
 gem 'jquery-rails', '~> 2.2.1'
@@ -50,7 +50,7 @@ group :test, :development do
 end
 
 # To use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
+gem 'bcrypt-ruby', '~> 3.1.1'
 
 # To use Jbuilder templates for JSON
 # gem 'jbuilder'
