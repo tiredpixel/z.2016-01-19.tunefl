@@ -18,16 +18,14 @@ gem 'fog', '~> 1.14.0'
 
 gem 'sidekiq', '~> 2.12.4'
 
+gem 'sass-rails',   '~> 3.2.3'
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
-  gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
-
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-  gem 'therubyracer', '~> 0.11.2', :platforms => :ruby
-  gem 'libv8', '~> 3.11.8'
-  
+  gem 'therubyracer', '~> 0.11.2', :platforms => :ruby  
   gem 'uglifier', '>= 2.1.2'
 end
 
