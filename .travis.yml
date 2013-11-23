@@ -10,3 +10,6 @@ before_script:
 script:
   - DATABASE_URL=postgresql://postgres:@localhost/myapp_test bundle exec rake db:migrate --trace
   - DATABASE_URL=postgresql://postgres:@localhost/myapp_test bundle exec rspec
+allow_failures:
+  rvm:
+    - 1.9.2

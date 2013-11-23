@@ -7,7 +7,7 @@ The live tunefl service is provided by [tunefl.com](http://www.tunefl.com) ([@tu
 
 More sleep lost by [tiredpixel](http://www.tiredpixel.com).
 
-[![Build Status](https://travis-ci.org/tiredpixel/tunefl.png?branch=master,develop)](https://travis-ci.org/tiredpixel/tunefl)
+[![Build Status](https://travis-ci.org/tiredpixel/tunefl.png?branch=master,stable)](https://travis-ci.org/tiredpixel/tunefl)
 
 
 ## Externals
@@ -58,16 +58,6 @@ Then send a pull request. Simples!
 If you'd like to discuss what you're doing or planning to do, or if you get stuck on something, then just wave. :)
 
 Do whatever makes you happy. We'll probably still like you. :)
-
-Branches are as follows:
-
-- [master](https://github.com/tiredpixel/tunefl/tree/master)
-  
-  Stable code; run on [tunefl.com](http://www.tunefl.com).
-
-- [develop](https://github.com/tiredpixel/tunefl/tree/develop)
-  
-  Edge code; normally the branch from which to branch.
 
 
 ## Blessing
