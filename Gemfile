@@ -1,41 +1,41 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.15'
+gem 'rails', '3.2.16'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'pg', '~> 0.17.0'
+gem 'pg', '~> 0.17'
 
 gem 'activeadmin', '~> 0.5.1'
 gem 'formtastic', '~> 2.1.1' # pin to work with activeadmin
 
-gem 'less-rails', '~> 2.3.2'
-gem 'twitter-bootstrap-rails', '~> 2.2.6'
+gem 'less-rails', '~> 2.3'
+gem 'twitter-bootstrap-rails', '~> 2.2'
 
-gem 'carrierwave', '~> 0.9.0'
-gem 'fog', '~> 1.18.0'
+gem 'carrierwave', '~> 0.9'
+gem 'fog', '~> 1.18'
 
-gem 'sidekiq', '~> 2.16.0'
+gem 'sidekiq', '~> 2.16'
 
-gem 'sass-rails',   '~> 3.2.3'
+gem 'sass-rails',   '~> 3.2'
 
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
-  gem 'coffee-rails', '~> 3.2.1'
+  gem 'coffee-rails', '~> 3.2'
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-  gem 'therubyracer', '~> 0.12.0', :platforms => :ruby  
-  gem 'uglifier', '>= 2.1.2'
+  gem 'therubyracer', '~> 0.12', :platforms => :ruby  
+  gem 'uglifier', '>= 2.1'
 end
 
-gem 'jquery-rails', '~> 2.2.1'
+gem 'jquery-rails', '~> 2.2'
 
-gem 'rack-google-analytics', '~> 0.12.0', :require => 'rack/google-analytics'
+gem 'rack-google-analytics', '~> 0.12', :require => 'rack/google-analytics'
 
 group :production do
   gem 'thin'
-  gem 'redis-rails', '~> 3.2.3'
+  gem 'redis-rails', '~> 3.2'
 end
 
 group :test, :development do
