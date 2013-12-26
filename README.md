@@ -44,6 +44,21 @@ More sleep lost by [tiredpixel](http://www.tiredpixel.com).
 
 - Using [Foreman](http://ddollar.github.io/foreman/), `foreman start`.
 
+- To monitor the queue using [sidekiq-spy](https://github.com/tiredpixel/sidekiq-spy):
+
+        sidekiq-spy -n resque
+
+  ensuring `-u` matches `WORKER_REDIS_URL` and `-n` matches `WORKER_REDIS_NS`.
+
+
+## Stay Tuned
+
+We have a [Librelist](http://librelist.com) mailing list!
+To subscribe, send an email to <tunefl@librelist.com>.
+To unsubscribe, send an email to <tunefl-unsubscribe@librelist.com>.
+There be [archives](http://librelist.com/browser/tunefl/).
+That was easy.
+
 
 ## Testing
 

@@ -2,7 +2,8 @@ language: ruby
 rvm:
   - 2.0.0
   - 1.9.3
-  - 1.9.2
+  - jruby-19mode
+  - rbx-19mode
 services:
   - redis-server
 before_script:
@@ -10,6 +11,11 @@ before_script:
 script:
   - DATABASE_URL=postgresql://postgres:@localhost/myapp_test bundle exec rake db:migrate --trace
   - DATABASE_URL=postgresql://postgres:@localhost/myapp_test bundle exec rspec
-allow_failures:
-  rvm:
-    - 1.9.2
+notifications:
+  email:
+    recipients:
+      - tp@tiredpixel.com
+matrix:
+  allow_failures:
+    - rvm: jruby-19mode
+    - rvm: rbx-19mode
