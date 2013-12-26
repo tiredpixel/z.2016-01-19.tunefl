@@ -51,6 +51,15 @@ More sleep lost by [tiredpixel](http://www.tiredpixel.com).
   ensuring `-u` matches `WORKER_REDIS_URL` and `-n` matches `WORKER_REDIS_NS`.
 
 
+## Stay Tuned
+
+We have a [Librelist](http://librelist.com) mailing list!
+To subscribe, send an email to <tunefl@librelist.com>.
+To unsubscribe, send an email to <tunefl-unsubscribe@librelist.com>.
+There be [archives](http://librelist.com/browser/tunefl/).
+That was easy.
+
+
 ## Testing
 
 - Using [Foreman](http://ddollar.github.io/foreman/), `foreman run rspec`.
