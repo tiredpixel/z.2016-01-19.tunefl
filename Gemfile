@@ -44,6 +44,8 @@ group :test, :development do
   gem 'database_cleaner'
   
   gem 'foreman'
+  
+  gem 'sidekiq-spy'
 end
 
 # To use ActiveModel has_secure_password

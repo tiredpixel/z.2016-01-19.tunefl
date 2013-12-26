@@ -44,6 +44,12 @@ More sleep lost by [tiredpixel](http://www.tiredpixel.com).
 
 - Using [Foreman](http://ddollar.github.io/foreman/), `foreman start`.
 
+- To monitor the queue using [sidekiq-spy](https://github.com/tiredpixel/sidekiq-spy):
+
+        sidekiq-spy -n resque
+
+  ensuring `-u` matches `WORKER_REDIS_URL` and `-n` matches `WORKER_REDIS_NS`.
+
 
 ## Testing
 
