@@ -6,7 +6,7 @@
 en:
   title: "@tunefl ♩"
   footer:
-    copyright: "© tunefl.com & tiredpixel 2013 ♮ tunefl is free software, released
+    copyright: "© tunefl.com & tiredpixel 2014 ♮ tunefl is free software, released
 under the MIT License."
     tiredpixel: "More sleep lost by tiredpixel."
   about:
@@ -22,7 +22,7 @@ under the MIT License."
       body: "We ask that users submitting content confirm that they own the copyright to the content they submit and license tunefl.com to use it, or that the content is suitably licensed, or that the content is in the public domain. We reserve the right to unpublish content from tunefl.com, if we choose. If you believe that content for which you own the copyright has been used without your permission, then please <a href='mailto:en@tunefl.com'>contact us</a>. <em>Encourage the arts. Please do not steal.</em>"
     license:
       title: "License"
-      body: "© tunefl.com & tiredpixel 2013 ♮ tunefl is free software, released
+      body: "© tunefl.com & tiredpixel 2014 ♮ tunefl is free software, released
 under <a href='https://github.com/tiredpixel/tunefl/blob/master/LICENSE'>the MIT License</a>. ♮ The tunefl code is available on <a href='https://github.com/tiredpixel/tunefl'>GitHub</a>. Contributions are embraced with much love and affection! :D"
   score:
     form:

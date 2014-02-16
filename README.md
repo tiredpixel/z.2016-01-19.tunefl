@@ -1,13 +1,15 @@
 # tunefl
 
+[![Build Status](https://travis-ci.org/tiredpixel/tunefl.png?branch=master,stable)](https://travis-ci.org/tiredpixel/tunefl)
+[![Code Climate](https://codeclimate.com/github/tiredpixel/tunefl.png)](https://codeclimate.com/github/tiredpixel/tunefl)
+
 ![](https://raw.github.com/tiredpixel/tunefl/master/app/assets/images/logo.png)
 
-tunefl is a musical application which runs [LilyPond](http://lilypond.org) as a service.
+[LilyPond](http://lilypond.org) mini-score engraving and sharing service for musicians.
+
 The live tunefl service is provided by [tunefl.com](http://www.tunefl.com) ([@tunefl](https://twitter.com/tunefl)).
 
 More sleep lost by [tiredpixel](http://www.tiredpixel.com).
-
-[![Build Status](https://travis-ci.org/tiredpixel/tunefl.png?branch=master,stable)](https://travis-ci.org/tiredpixel/tunefl)
 
 
 ## Externals
@@ -37,6 +39,9 @@ More sleep lost by [tiredpixel](http://www.tiredpixel.com).
   
   Migrate using `rake db:migrate` (`rake db:schema:load` won't work properly).
 
+The default Ruby version supported is defined in `.ruby-version`.
+Any other versions supported are defined in `.travis.yml`.
+
 
 ## Run-time
 
@@ -59,20 +64,25 @@ To unsubscribe, send an email to <tunefl-unsubscribe@librelist.com>.
 There be [archives](http://librelist.com/browser/tunefl/).
 That was easy.
 
-
-## Testing
-
-- Using [Foreman](http://ddollar.github.io/foreman/), `foreman run rspec`.
+You can also become a [watcher](https://github.com/tiredpixel/tunefl/watchers)
+on GitHub. And don't forget you can become a [stargazer](https://github.com/tiredpixel/tunefl/stargazers) if you are so minded. :D
 
 
 ## Contributions
 
-Contributions are embraced with much love and affection.
-Please fork the repository and wizard your magic, ensuring that any tests are not broken by the changes.
-Then send a pull request. Simples!
-If you'd like to discuss what you're doing or planning to do, or if you get stuck on something, then just wave. :)
+Contributions are embraced with much love and affection!
+Please fork the repository and wizard your magic, ensuring that any tests are not broken by the changes. :)
+Then send me a pull request. Simples!
+If you'd like to discuss what you're doing or planning to do, or if you get
+stuck on something, then just wave. :)
 
 Do whatever makes you happy. We'll probably still like you. :)
+
+Tests are written using [RSpec](http://rspec.info/). To run all tests:
+
+    foreman run rspec
+
+There are not many tests, because the application is very simple. If generating a score from the home page works, then things are probably okay.
 
 
 ## Blessing
@@ -80,7 +90,7 @@ Do whatever makes you happy. We'll probably still like you. :)
 May you find peace, and help others to do likewise.
 
 
-## License
+## Licence
 
-© [tunefl.com](http://www.tunefl.com) & [tiredpixel](http://www.tiredpixel.com) 2013.
+© [tunefl.com](http://www.tunefl.com) & [tiredpixel](http://www.tiredpixel.com) 2014.
 It is free software, released under the MIT License, and may be redistributed under the terms specified in `LICENSE`.
