@@ -5,6 +5,8 @@ gem 'rails', '3.2.16'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
+gem 'curses', '~> 1.0' # activesupport needs this in Ruby 2.1.0
+
 gem 'pg', '~> 0.17'
 
 gem 'activeadmin', '~> 0.6.2'

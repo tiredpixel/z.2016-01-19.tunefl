@@ -63,6 +63,7 @@ GEM
     coffee-script-source (1.7.0)
     commonjs (0.2.7)
     connection_pool (1.2.0)
+    curses (1.0.0)
     daemons (1.1.9)
     database_cleaner (1.2.0)
     devise (3.2.2)
@@ -257,6 +258,7 @@ DEPENDENCIES
   bcrypt-ruby (~> 3.1.1)
   carrierwave (~> 0.9)
   coffee-rails (~> 3.2)
+  curses (~> 1.0)
   database_cleaner
   factory_girl_rails
   fog (~> 1.18)
