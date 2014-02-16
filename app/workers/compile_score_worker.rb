@@ -1,11 +1,14 @@
 require 'tmpdir'
 require 'erb'
+require 'timeout'
 
 
 class LilyPondException < StandardError; end
 
 
 class CompileScoreWorker
+  
+  COMPILE_TIMEOUT = 60
   
   include Sidekiq::Worker
   
@@ -25,7 +28,9 @@ class CompileScoreWorker
     begin
       self.class.generate_lilypond(score, files)
       
-      self.class.compile_lilypond(score, files)
+      Timeout::timeout(ENV['WORKER_COMPILE_TIMEOUT'].to_i || COMPILE_TIMEOUT) {
+        self.class.compile_lilypond(score, files)
+      }
       
       score.usable = true
       
