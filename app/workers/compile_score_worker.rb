@@ -2,7 +2,7 @@ require 'tmpdir'
 require 'erb'
 
 
-class LilyPondException < Exception; end
+class LilyPondException < StandardError; end
 
 
 class CompileScoreWorker
@@ -23,23 +23,23 @@ class CompileScoreWorker
     }
     
     begin
-      CompileScoreWorker::generate_lilypond(score, files)
+      self.class.generate_lilypond(score, files)
       
-      CompileScoreWorker::compile_lilypond(score, files)
+      self.class.compile_lilypond(score, files)
       
       score.usable = true
       
       score.save
-    rescue Exception => e
-      score.usable = false
+    rescue
+      score.update_attribute(:usable, false)
       
-      score.save
-      
-      raise e
+      raise
     ensure
       FileUtils.remove_entry_secure tmpdir
     end
   end
+  
+  private
   
   def self.generate_lilypond(score, files)
     lilypond_data = ERB.new(File.read(
@@ -49,8 +49,6 @@ class CompileScoreWorker
     File.write(files[:lilypond], lilypond_data)
     
     score.lilypond = File.open(files[:lilypond])
-    
-    score.save
   end
   
   def self.compile_lilypond(score, files)
@@ -61,8 +59,6 @@ class CompileScoreWorker
     score.preview = File.open(files[:preview_png])
     
     score.midi = File.open(files[:midi])
-    
-    score.save
   end
   
 end
