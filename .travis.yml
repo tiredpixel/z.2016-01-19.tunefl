@@ -1,9 +1,6 @@
 language: ruby
 rvm:
-  - 2.0.0
-  - 1.9.3
-  - jruby-19mode
-  - rbx-19mode
+  - 2.1.0
 services:
   - redis-server
 before_script:
@@ -15,7 +12,3 @@ notifications:
   email:
     recipients:
       - tp@tiredpixel.com
-matrix:
-  allow_failures:
-    - rvm: jruby-19mode
-    - rvm: rbx-19mode

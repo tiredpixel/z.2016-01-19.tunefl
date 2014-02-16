@@ -37,6 +37,9 @@ More sleep lost by [tiredpixel](http://www.tiredpixel.com).
   
   Migrate using `rake db:migrate` (`rake db:schema:load` won't work properly).
 
+The default Ruby version supported is defined in `.ruby-version`.
+Any other versions supported are defined in `.travis.yml`.
+
 
 ## Run-time
 
