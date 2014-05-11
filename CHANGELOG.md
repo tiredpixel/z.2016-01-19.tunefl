@@ -6,6 +6,13 @@ For many of commits by [tiredpixel](http://www.tiredpixel.com), the commit
 message provides information and examples.
 
 
+## 1.4.5
+
+- support Ruby 2.1.2 only
+- upgrade to Rails 3.2.18
+- upgrade of many gems
+
+
 ## 1.4.4
 
 - start of support for Ruby 2.1.0; end of support for other versions (please wave if this upsets you :) )
