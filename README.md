@@ -20,14 +20,12 @@ More sleep lost by [tiredpixel](http://www.tiredpixel.com).
 
 - [LilyPond](http://lilypond.org)
   
-  Ensure in `PATH` by running `lilypond` on the command-line.
+  Ensure `lilypond` is in the `PATH`.
 
 
 ## Installation
 
-- Config
-  
-  Copy and edit as appropriate:
+- Config (copy and edit as appropriate):
   
   - `.env.example` => `.env`
 
@@ -43,17 +41,17 @@ The default Ruby version supported is defined in `.ruby-version`.
 Any other versions supported are defined in `.travis.yml`.
 
 
-## Run-time
+## Usage
 
-- Services are defined in `Procfile`.
+Start the `Procfile` processes:
 
-- Using [Foreman](http://ddollar.github.io/foreman/), `foreman start`.
+    foreman start
 
-- To monitor the queue using [sidekiq-spy](https://github.com/tiredpixel/sidekiq-spy):
+Visit the `web` process at <http://localhost:3000> or similar. Visit the `web` process admin section at <http://localhost:3000/admin> or similar.
 
-        sidekiq-spy -n resque
+Monitor the queue using [sidekiq-spy](https://github.com/tiredpixel/sidekiq-spy):
 
-  ensuring `-u` matches `WORKER_REDIS_URL` and `-n` matches `WORKER_REDIS_NS`.
+    sidekiq-spy -n resque
 
 
 ## Stay Tuned
@@ -62,17 +60,16 @@ We have a [Librelist](http://librelist.com) mailing list!
 To subscribe, send an email to <tunefl@librelist.com>.
 To unsubscribe, send an email to <tunefl-unsubscribe@librelist.com>.
 There be [archives](http://librelist.com/browser/tunefl/).
-That was easy.
 
 You can also become a [watcher](https://github.com/tiredpixel/tunefl/watchers)
-on GitHub. And don't forget you can become a [stargazer](https://github.com/tiredpixel/tunefl/stargazers) if you are so minded. :D
+on GitHub. And you can become a [stargazer](https://github.com/tiredpixel/tunefl/stargazers) if you are so minded. :D
 
 
 ## Contributions
 
 Contributions are embraced with much love and affection!
 Please fork the repository and wizard your magic, ensuring that any tests are not broken by the changes. :)
-Then send me a pull request. Simples!
+Then send me a pull request.
 If you'd like to discuss what you're doing or planning to do, or if you get
 stuck on something, then just wave. :)
 
