@@ -1,11 +1,9 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.18'
+gem 'rails', '3.2.21'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
-
-gem 'curses', '~> 1.0' # activesupport needs this in Ruby 2.1.0
 
 gem 'pg', '~> 0.17'
 
@@ -19,7 +17,7 @@ gem 'fog', '~> 1.18'
 
 gem 'sidekiq', '~> 2.16'
 
-gem 'sass-rails',   '~> 3.2'
+gem 'sass-rails', '~> 3.2'
 
 # Gems used only for assets and not required
 # in production environments by default.
