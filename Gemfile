@@ -5,6 +5,10 @@ gem 'rails', '3.2.21'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
+gem 'thin', '~> 1.6'
+
+gem 'redis-rails', '~> 3.2'
+
 gem 'pg', '~> 0.17'
 
 gem 'activeadmin', '~> 0.6.2'
@@ -31,11 +35,6 @@ end
 gem 'jquery-rails', '~> 2.2'
 
 gem 'rack-google-analytics', '~> 0.12', :require => 'rack/google-analytics'
-
-group :production do
-  gem 'thin'
-  gem 'redis-rails', '~> 3.2'
-end
 
 group :test, :development do
   gem 'rspec-rails'

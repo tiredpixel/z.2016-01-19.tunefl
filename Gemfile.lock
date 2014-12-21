@@ -344,6 +344,6 @@ DEPENDENCIES
   sidekiq (~> 2.16)
   sidekiq-spy
   therubyracer (~> 0.12)
-  thin
+  thin (~> 1.6)
   twitter-bootstrap-rails (~> 2.2)
   uglifier (>= 2.1)
