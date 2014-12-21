@@ -1,11 +1,13 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.18'
+gem 'rails', '3.2.21'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'curses', '~> 1.0' # activesupport needs this in Ruby 2.1.0
+gem 'thin', '~> 1.6'
+
+gem 'redis-rails', '~> 3.2'
 
 gem 'pg', '~> 0.17'
 
@@ -19,7 +21,7 @@ gem 'fog', '~> 1.18'
 
 gem 'sidekiq', '~> 2.16'
 
-gem 'sass-rails',   '~> 3.2'
+gem 'sass-rails', '~> 3.2'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -33,11 +35,6 @@ end
 gem 'jquery-rails', '~> 2.2'
 
 gem 'rack-google-analytics', '~> 0.12', :require => 'rack/google-analytics'
-
-group :production do
-  gem 'thin'
-  gem 'redis-rails', '~> 3.2'
-end
 
 group :test, :development do
   gem 'rspec-rails'

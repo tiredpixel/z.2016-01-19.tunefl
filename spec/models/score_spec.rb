@@ -24,7 +24,7 @@ describe Score do
   
   context "Instance Attributes Defaults" do
     it "should set default :blocked to false" do
-      Score.new.blocked.should be_false
+      Score.new.blocked.should be_falsey
     end
   end
   
