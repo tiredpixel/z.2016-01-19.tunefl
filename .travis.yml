@@ -1,14 +1,16 @@
 language: ruby
 rvm:
-  - 2.1.5
+  - 2.2.3
 services:
   - redis-server
+env:
+ - DATABASE_URL=postgresql://postgres:@localhost/tunefl_test
 before_script:
-  - psql -c 'create database myapp_test;' -U postgres
+  - psql -c 'create database tunefl_test;' -U postgres
 script:
-  - DATABASE_URL=postgresql://postgres:@localhost/myapp_test bundle exec rake db:migrate --trace
-  - DATABASE_URL=postgresql://postgres:@localhost/myapp_test bundle exec rspec
+  - bundle exec rake db:migrate
+  - bundle exec rake
 notifications:
   email:
     recipients:
-      - tp@tiredpixel.com
+      - tiredpixel@posteo.de

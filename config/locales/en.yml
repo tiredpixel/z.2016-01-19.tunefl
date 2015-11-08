@@ -6,7 +6,7 @@
 en:
   title: "@tunefl ♩"
   footer:
-    copyright: "© tunefl.com & tiredpixel 2014 ♮ tunefl is free software, released
+    copyright: "© tunefl.com & tiredpixel 2012 - 2015 ♮ tunefl is free software, released
 under the MIT License."
     tiredpixel: "More sleep lost by tiredpixel."
   about:
@@ -14,15 +14,12 @@ under the MIT License."
     subtitle: "Turn text into mini-scores and MIDI downloads."
   legal:
     title: "Legal"
-    cookies:
-      title: "Cookies and Tracking"
-      body: "We allow third-party companies, including AddThis, to collect certain anonymous information when you visit our website. These companies may use non-personally identifiable information during your visits to this and other websites in order to provide advertisements about goods and services likely to be of greater interest to you. These companies typically use a cookie or a third party web beacon to collect this information. To learn more about this behavioral advertising practice, you can visit <a href='http://www.networkadvertising.org'>www.networkadvertising.org</a>."
     copyright:
       title: "Copyright"
       body: "We ask that users submitting content confirm that they own the copyright to the content they submit and license tunefl.com to use it, or that the content is suitably licensed, or that the content is in the public domain. We reserve the right to unpublish content from tunefl.com, if we choose. If you believe that content for which you own the copyright has been used without your permission, then please <a href='mailto:en@tunefl.com'>contact us</a>. <em>Encourage the arts. Please do not steal.</em>"
     license:
       title: "License"
-      body: "© tunefl.com & tiredpixel 2014 ♮ tunefl is free software, released
+      body: "© tunefl.com & tiredpixel 2012 - 2015 ♮ tunefl is free software, released
 under <a href='https://github.com/tiredpixel/tunefl/blob/master/LICENSE'>the MIT License</a>. ♮ The tunefl code is available on <a href='https://github.com/tiredpixel/tunefl'>GitHub</a>. Contributions are embraced with much love and affection! :D"
   score:
     form:

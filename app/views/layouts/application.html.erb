@@ -8,7 +8,7 @@
     
     <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
     <!--[if lt IE 9]>
-      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
+      <script src="//html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
     <![endif]-->
     
     <%= stylesheet_link_tag "application", :media => "all" %>
@@ -19,7 +19,7 @@
     <link href="images/apple-touch-icon-72x72.png" rel="apple-touch-icon" sizes="72x72">
     <link href="images/apple-touch-icon-114x114.png" rel="apple-touch-icon" sizes="114x114">
     
-    <link href='http://fonts.googleapis.com/css?family=Ubuntu&amp;subset=latin,cyrillic-ext,latin-ext,cyrillic,greek,greek-ext' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Ubuntu&amp;subset=latin,cyrillic-ext,latin-ext,cyrillic,greek,greek-ext' rel='stylesheet' type='text/css'>
   </head>
   
   <body>
@@ -44,12 +44,6 @@
         <div class='row'>
           <div class='span12'>
             <%= content_for?(:whole) ? yield(:whole) : "" %>
-          </div>
-        </div>
-        
-        <div class='row'>
-          <div class='span12'>
-            <%= render :partial => "shared/sharing" %>
           </div>
         </div>
         
