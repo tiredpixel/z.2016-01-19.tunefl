@@ -2,7 +2,7 @@
 
 This changelog documents the main changes between released versions.
 For a full list of changes, consult the commit history.
-For many of commits by [tiredpixel](http://www.tiredpixel.com), the commit
+For many of commits by [tiredpixel](https://www.tiredpixel.com), the commit
 message provides information and examples.
 
 

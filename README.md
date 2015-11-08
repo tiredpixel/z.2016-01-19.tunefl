@@ -7,9 +7,9 @@
 
 [LilyPond](http://lilypond.org) mini-score engraving and sharing service for musicians.
 
-The live tunefl service is provided by [tunefl.com](http://www.tunefl.com) ([@tunefl](https://twitter.com/tunefl)).
+The live tunefl service is provided by [tunefl.com](https://www.tunefl.com) ([@tunefl](https://twitter.com/tunefl)).
 
-More sleep lost by [tiredpixel](http://www.tiredpixel.com).
+More sleep lost by [tiredpixel](https://www.tiredpixel.com).
 
 
 ## Externals
@@ -89,5 +89,5 @@ May you find peace, and help others to do likewise.
 
 ## Licence
 
-© [tunefl.com](http://www.tunefl.com) & [tiredpixel](http://www.tiredpixel.com) 2014.
+© [tunefl.com](https://www.tunefl.com) & [tiredpixel](https://www.tiredpixel.com) 2012 - 2015.
 It is free software, released under the MIT License, and may be redistributed under the terms specified in `LICENSE`.

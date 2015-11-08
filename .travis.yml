@@ -11,4 +11,4 @@ script:
 notifications:
   email:
     recipients:
-      - tp@tiredpixel.com
+      - tiredpixel@posteo.de
