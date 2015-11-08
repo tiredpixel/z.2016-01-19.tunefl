@@ -6,6 +6,16 @@ For many of commits by [tiredpixel](https://www.tiredpixel.com), the commit
 message provides information and examples.
 
 
+## 1.4.7
+
+- support Ruby 2.2.3 only
+- upgrade to Rails 3.2.22
+- upgrade various gems
+- remove Google Analytics tracking
+- remove AddThis tracking
+- fix layout for SSL
+
+
 ## 1.4.6
 
 - support Ruby 2.1.5 only
