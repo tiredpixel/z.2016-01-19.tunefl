@@ -34,8 +34,6 @@ end
 
 gem 'jquery-rails', '~> 2.2'
 
-gem 'rack-google-analytics', '~> 0.12', :require => 'rack/google-analytics'
-
 group :test, :development do
   gem 'rspec-rails'
   gem 'shoulda-matchers'
