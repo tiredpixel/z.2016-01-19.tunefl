@@ -41,10 +41,10 @@ cp .env.example .env
 
 ### Database
 
-Build and start all services (or choose individually if you prefer):
+Start the `postgres` service:
 
 ```bash
-docker-compose up
+docker-compose up -d postgres
 ```
 
 Connect using `psql`:
@@ -60,10 +60,22 @@ CREATE ROLE tunefl_dev LOGIN PASSWORD 'password';
 CREATE DATABASE tunefl_dev OWNER tunefl_dev;
 ```
 
+Start the `web` service:
+
+```bash
+docker-compose up -d web
+```
+
 Migrate the database:
 
 ```bash
 docker exec -it tunefl_web_1 rake db:migrate
+```
+
+Stop all services:
+
+```bash
+docker-compose stop
 ```
 
 
