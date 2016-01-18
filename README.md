@@ -39,8 +39,6 @@ Copy and configure your settings:
 cp .env.example .env
 ```
 
-### Core
-
 ### Database
 
 Start the `postgres` service:
@@ -96,11 +94,13 @@ Monitor the queue using
 [Sidekiq Spy](https://github.com/tiredpixel/sidekiq-spy):
 
 ```bash
-docker-compose run --rm worker bundle exec sidekiq-spy -n resque
+docker-compose run --rm worker bundle exec sidekiq-spy -h redis -n resque
 ```
 
 
 ## Development
+
+*TODO: update for Docker instructions*
 
 To run all tests:
 
