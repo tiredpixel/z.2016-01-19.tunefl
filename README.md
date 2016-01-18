@@ -1,4 +1,4 @@
-# tunefl
+# Tunefl
 
 [![Build Status](https://travis-ci.org/tiredpixel/tunefl.png?branch=master,stable)](https://travis-ci.org/tiredpixel/tunefl)
 [![Code Climate](https://codeclimate.com/github/tiredpixel/tunefl.png)](https://codeclimate.com/github/tiredpixel/tunefl)
@@ -7,7 +7,7 @@
 
 [LilyPond](http://lilypond.org) mini-score engraving and sharing service for musicians.
 
-The live tunefl service is provided by [tunefl.com](https://www.tunefl.com) ([@tunefl](https://twitter.com/tunefl)).
+The live Tunefl service is at [tunefl.com](https://www.tunefl.com).
 
 More sleep lost by [tiredpixel](https://www.tiredpixel.com).
 
@@ -56,30 +56,38 @@ Monitor the queue using [sidekiq-spy](https://github.com/tiredpixel/sidekiq-spy)
 
 ## Stay Tuned
 
-We have a [Librelist](http://librelist.com) mailing list!
-To subscribe, send an email to <tunefl@librelist.com>.
-To unsubscribe, send an email to <tunefl-unsubscribe@librelist.com>.
-There be [archives](http://librelist.com/browser/tunefl/).
 
-You can also become a [watcher](https://github.com/tiredpixel/tunefl/watchers)
-on GitHub. And you can become a [stargazer](https://github.com/tiredpixel/tunefl/stargazers) if you are so minded. :D
+## Development
+
+To run all tests:
+
+```bash
+foreman run rspec
+```
+
+Tests are written using [RSpec](http://rspec.info/).
+There are not many tests, because the application is very simple.
+If generating a score from the home page works, then things are probably okay.
+
+
+## Stay Tuned
+
+You can become a
+[watcher](https://github.com/tiredpixel/tunefl/watchers)
+on GitHub. And you can become a
+[stargazer](https://github.com/tiredpixel/tunefl/stargazers)
+if you are so minded. :D
 
 
 ## Contributions
 
-Contributions are embraced with much love and affection!
-Please fork the repository and wizard your magic, ensuring that any tests are not broken by the changes. :)
-Then send me a pull request.
-If you'd like to discuss what you're doing or planning to do, or if you get
-stuck on something, then just wave. :)
+Contributions are welcome! Please fork the repository and prepare your patches
+in one or more branches, ensuring that any tests are not broken by the changes.
+Then, send me one or more pull requests. Proposed patches will then be reviewed
+prior to acceptance, usually into `master` branch.
+If you'd like to discuss something, then please get in touch.
 
 Do whatever makes you happy. We'll probably still like you. :)
-
-Tests are written using [RSpec](http://rspec.info/). To run all tests:
-
-    foreman run rspec
-
-There are not many tests, because the application is very simple. If generating a score from the home page works, then things are probably okay.
 
 
 ## Blessing
@@ -89,5 +97,5 @@ May you find peace, and help others to do likewise.
 
 ## Licence
 
-© [tunefl.com](https://www.tunefl.com) & [tiredpixel](https://www.tiredpixel.com) 2012 - 2015.
-It is free software, released under the MIT License, and may be redistributed under the terms specified in `LICENSE`.
+Copyright © 2012-2016 [tiredpixel](https://www.tiredpixel.com).
+See `LICENSE.txt`.
