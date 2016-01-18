@@ -12,49 +12,92 @@ The live Tunefl service is at [tunefl.com](https://www.tunefl.com).
 More sleep lost by [tiredpixel](https://www.tiredpixel.com).
 
 
-## Externals
-
-- [PostgreSQL](http://www.postgresql.org/)
-
-- [Redis](http://redis.io/)
-
-- [LilyPond](http://lilypond.org)
-  
-  Ensure `lilypond` is in the `PATH`.
-
-
 ## Installation
 
-- Config (copy and edit as appropriate):
-  
-  - `.env.example` => `.env`
+The primary method of development installation is using
+[Docker](https://www.docker.com/). You can also use this as a basis for
+production installation, but you'll probably want to change some things, if so.
 
-- Libraries
-  
-  Using [Bundler](http://gembundler.com/), `bundle install`.
-
-- Database
-  
-  Migrate using `rake db:migrate` (`rake db:schema:load` won't work properly).
+You can also install manually, by installing the linked services and packages
+defined in `Dockerfile` & `Dockerfile.worker`, using `bundle install`, and
+running services using the supplied `Procfile`.
 
 The default Ruby version supported is defined in `.ruby-version`.
 Any other versions supported are defined in `.travis.yml`.
 
+### Prerequisites
+
+- [Docker Engine](https://docs.docker.com/engine/installation/)
+
+- [Docker Compose](https://docs.docker.com/compose/install/)
+
+### Configuration
+
+Copy and configure your settings:
+
+```bash
+cp .env.example .env
+```
+
+### Core
+
+### Database
+
+Start the `postgres` service:
+
+```bash
+docker-compose up postgres -d
+```
+
+Connect using `psql`:
+
+```bash
+docker-compose run --rm postgres sh -c 'exec psql -h "$POSTGRES_PORT_5432_TCP_ADDR" -p "$POSTGRES_PORT_5432_TCP_PORT" -U postgres'
+```
+
+Create the database, replacing `__password__`, syncing with your `.env`:
+
+```sql
+CREATE ROLE tunefl_dev LOGIN PASSWORD __password__;
+CREATE DATABASE tunefl_dev OWNER tunefl_dev;
+```
+
+Migrate the database:
+
+```bash
+docker-compose run --rm web rake db:migrate
+```
+
+Stop the `postgres` service:
+
+```bash
+docker-compose stop postgres
+```
+
 
 ## Usage
 
-Start the `Procfile` processes:
+Start all services:
 
-    foreman start
+```bash
+docker-compose up
+```
 
-Visit the `web` process at <http://localhost:3000> or similar. Visit the `web` process admin section at <http://localhost:3000/admin> or similar.
+Discover the mapped port for the `web` service:
 
-Monitor the queue using [sidekiq-spy](https://github.com/tiredpixel/sidekiq-spy):
+```bash
+docker-compose port web 8080
+```
 
-    sidekiq-spy -n resque
+Visit <http://localhost:8080> or similar in a browser.
+Visit <http://localhost:8080/admin> or similar for the admin area.
 
+Monitor the queue using
+[Sidekiq Spy](https://github.com/tiredpixel/sidekiq-spy):
 
-## Stay Tuned
+```bash
+docker-compose run --rm worker bundle exec sidekiq-spy -n resque
+```
 
 
 ## Development

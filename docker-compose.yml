@@ -1,0 +1,26 @@
+---
+web:
+  build: "."
+  env_file: ".env"
+  ports:
+    - "127.0.0.1::8080"
+  volumes:
+    - ".:/srv/tunefl/:ro"
+  links:
+    - redis
+    - postgres
+  command: "bundle exec thin start -p 8080"
+worker:
+  dockerfile: "Dockerfile.worker"
+  build: "."
+  env_file: ".env"
+  volumes_from:
+    - web
+  links:
+    - redis
+    - postgres
+  command: "bundle exec sidekiq"
+postgres:
+  image: "postgres:9.3.10"
+redis:
+  image: "redis:3.0.5"
