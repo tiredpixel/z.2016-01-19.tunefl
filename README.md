@@ -41,35 +41,29 @@ cp .env.example .env
 
 ### Database
 
-Start the `postgres` service:
+Build and start all services (or choose individually if you prefer):
 
 ```bash
-docker-compose up postgres -d
+docker-compose up
 ```
 
 Connect using `psql`:
 
 ```bash
-docker-compose run --rm postgres sh -c 'exec psql -h "$POSTGRES_PORT_5432_TCP_ADDR" -p "$POSTGRES_PORT_5432_TCP_PORT" -U postgres'
+docker exec -it tunefl_postgres_1 psql -U postgres
 ```
 
-Create the database, replacing `__password__`, syncing with your `.env`:
+Create the database:
 
 ```sql
-CREATE ROLE tunefl_dev LOGIN PASSWORD __password__;
+CREATE ROLE tunefl_dev LOGIN PASSWORD 'password';
 CREATE DATABASE tunefl_dev OWNER tunefl_dev;
 ```
 
 Migrate the database:
 
 ```bash
-docker-compose run --rm web rake db:migrate
-```
-
-Stop the `postgres` service:
-
-```bash
-docker-compose stop postgres
+docker exec -it tunefl_web_1 rake db:migrate
 ```
 
 
@@ -94,7 +88,8 @@ Monitor the queue using
 [Sidekiq Spy](https://github.com/tiredpixel/sidekiq-spy):
 
 ```bash
-docker-compose run --rm worker bundle exec sidekiq-spy -h redis -n resque
+docker exec -it tunefl_worker_1 \
+    sh -c 'TERM=xterm bundle exec sidekiq-spy -h redis -n resque'
 ```
 
 
