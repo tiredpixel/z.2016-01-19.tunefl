@@ -31,6 +31,18 @@ Any other versions supported are defined in `.travis.yml`.
 
 - [Docker Compose](https://docs.docker.com/compose/install/)
 
+Various versions will probably work. I'm currently using:
+
+```bash
+# docker --version
+Docker version 1.9.1, build a34a1d5
+# docker-compose --version
+docker-compose version 1.5.2, build 7240ff3
+```
+
+Note that `--x-networking` will no longer be preview in Docker Compose 1.6, so
+this flag might not be necessary for you.
+
 ### Configuration
 
 Copy and configure your settings:
@@ -44,7 +56,7 @@ cp .env.example .env
 Start the `postgres` service:
 
 ```bash
-docker-compose up -d postgres
+docker-compose --x-networking up -d postgres
 ```
 
 Connect using `psql`:
@@ -63,7 +75,7 @@ CREATE DATABASE tunefl_dev OWNER tunefl_dev;
 Start the `web` service:
 
 ```bash
-docker-compose up -d web
+docker-compose --x-networking up -d web
 ```
 
 Migrate the database:
@@ -84,7 +96,7 @@ docker-compose stop
 Start all services:
 
 ```bash
-docker-compose up
+docker-compose --x-networking up
 ```
 
 Open the `web` service in a browser:

@@ -6,9 +6,6 @@ web:
     - ".:/srv/tunefl/:ro"
   ports:
     - "127.0.0.1::8080"
-  links:
-    - redis
-    - postgres
   command: "bundle exec thin start -p 8080"
 worker:
   build: *build
@@ -16,9 +13,6 @@ worker:
   dockerfile: "Dockerfile.worker"
   volumes_from:
     - web
-  links:
-    - redis
-    - postgres
   command: "bundle exec sidekiq"
 postgres:
   image: "postgres:9.3.10"
