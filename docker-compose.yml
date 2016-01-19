@@ -1,19 +1,19 @@
 ---
 web:
-  build: "."
-  env_file: ".env"
-  ports:
-    - "127.0.0.1::8080"
+  build: &build "."
+  env_file: &env_file ".env"
   volumes:
     - ".:/srv/tunefl/:ro"
+  ports:
+    - "127.0.0.1::8080"
   links:
     - redis
     - postgres
   command: "bundle exec thin start -p 8080"
 worker:
+  build: *build
+  env_file: *env_file
   dockerfile: "Dockerfile.worker"
-  build: "."
-  env_file: ".env"
   volumes_from:
     - web
   links:

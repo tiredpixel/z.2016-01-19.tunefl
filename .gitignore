@@ -20,11 +20,11 @@
 # Ignore local uploads
 /public/uploads/
 
-# Ignore foreman files.
-/*.env
-
 # Ignore documentation.
 /doc/
 
 # Ignore static compiled assets.
 /public/assets/
+
+/*.env
+/docker-compose.*.yml

@@ -69,7 +69,7 @@ docker-compose up -d web
 Migrate the database:
 
 ```bash
-docker exec -it tunefl_web_1 rake db:migrate
+docker exec tunefl_web_1 bundle exec rake db:migrate
 ```
 
 Stop all services:
@@ -110,12 +110,42 @@ docker exec -it tunefl_worker_1 \
 
 ## Development
 
-*TODO: update for Docker instructions*
+Create multiple stacks as required; the main one in installation is suitable for
+a `dev` stack, and you can build on this. You'll probably also want to create a
+`test` stack, following similar steps. One approach is to:
+
+Add an alias to your shell; for Bash:
+
+```bash
+echo "alias docker-compose-stack='docker-compose -f docker-compose.\$STACK.yml -p \$STACK'" >> ~/.bashrc
+source ~/.bashrc
+```
+
+Copy and configure a different settings file (here I'm using `0` as a separator
+as Docker Compose currently strips `-_.`):
+
+```bash
+cp .env.example .tunefl0test.env
+```
+
+Copy the Docker Compose file, modifying to point to your `.tunefl0test.env`:
+
+```bash
+cp docker-compose.yml docker-compose.tunefl0test.yml
+```
+
+Thereafter, execute `docker-compose` commands using `docker-compose-stack`. I
+prefer to be explicit and use a subshell, as a protection against forgetting
+which stack I'm using; e.g. to start all services:
+
+```bash
+(export STACK=tunefl0test; docker-compose-stack up)
+```
 
 To run all tests:
 
 ```bash
-foreman run rspec
+docker exec tunefl0test_web_1 bundle exec rspec
 ```
 
 Tests are written using [RSpec](http://rspec.info/).
