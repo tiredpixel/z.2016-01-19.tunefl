@@ -34,4 +34,7 @@ Tunefl::Application.configure do
 
   # Expands the lines which load the assets
   config.assets.debug = true
+  
+  config.logger = Logger.new($stdout)
+  config.logger.level = Logger.const_get(ENV.fetch('LOG_LEVEL'))
 end

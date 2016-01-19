@@ -34,4 +34,7 @@ Tunefl::Application.configure do
 
   # Print deprecation notices to the stderr
   config.active_support.deprecation = :stderr
+  
+  config.logger = Logger.new($stdout)
+  config.logger.level = Logger.const_get(ENV.fetch('LOG_LEVEL'))
 end

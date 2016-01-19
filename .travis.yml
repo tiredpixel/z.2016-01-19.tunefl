@@ -4,13 +4,10 @@ rvm:
 services:
   - redis-server
 env:
- - DATABASE_URL=postgresql://postgres:@localhost/tunefl_test
+ - DATABASE_URL=postgresql://tunefl_test:password@localhost/tunefl_test LOG_LEVEL=DEBUG
 before_script:
-  - psql -c 'create database tunefl_test;' -U postgres
-script:
+  - psql -U postgres -c "CREATE ROLE tunefl_test LOGIN PASSWORD 'password'"
+  - psql -U postgres -c "CREATE DATABASE tunefl_test OWNER tunefl_test"
   - bundle exec rake db:migrate
+script:
   - bundle exec rake
-notifications:
-  email:
-    recipients:
-      - tiredpixel@posteo.de
