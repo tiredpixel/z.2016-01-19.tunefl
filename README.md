@@ -115,8 +115,8 @@ Monitor the queue using
 [Sidekiq Spy](https://github.com/tiredpixel/sidekiq-spy):
 
 ```bash
-docker exec -it tunefl_worker_1 \
-    sh -c 'TERM=xterm bundle exec sidekiq-spy -h redis -n resque'
+docker exec -it tunefl_worker_1 sh \
+    -c 'TERM=xterm bundle exec sidekiq-spy -h tunefl_redis_1.tunefl -n resque'
 ```
 
 
