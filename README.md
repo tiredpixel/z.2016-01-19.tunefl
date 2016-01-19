@@ -87,14 +87,17 @@ Start all services:
 docker-compose up
 ```
 
-Discover the mapped port for the `web` service:
+Open the `web` service in a browser:
 
 ```bash
-docker-compose port web 8080
+xdg-open "http://$(docker-compose port web 8080)"
 ```
 
-Visit <http://localhost:8080> or similar in a browser.
-Visit <http://localhost:8080/admin> or similar for the admin area.
+Open the `web` service admin area in a browser:
+
+```bash
+xdg-open "http://$(docker-compose port web 8080)/admin"
+```
 
 Monitor the queue using
 [Sidekiq Spy](https://github.com/tiredpixel/sidekiq-spy):
